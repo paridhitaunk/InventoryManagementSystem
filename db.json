@@ -1,0 +1,22 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "Product": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Orders":[
+    {
+      "name": "typicode"
+    }
+  ] 
+  
+}
