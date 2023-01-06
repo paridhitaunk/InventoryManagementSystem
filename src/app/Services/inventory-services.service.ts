@@ -15,26 +15,36 @@ export class InventoryServicesService {
 
   // supplier = new SupplierForm();
   
-  // supplierId = new Subject(); //Subject gives upcoming value
-  // setEmpId(id:any){
+  supplierId = new Subject(); //Subject gives upcoming value
+  // setSupplierId(id:any){
   //   console.log(id);
   //   this.supplierId.next(id); //data stored to Observable
   // }
 
 
-  SaveSupplierDetails(supplier: SupplierForm)
+  AddSupplier(supplier: any): Observable<any> 
   {
-      return this.http.post<SupplierForm>(this.baseUrl+"/Supplier",supplier);
+      return this.http.post<any>(this.baseUrl+"/Supplier",supplier);
   }
 
-  GetSupplier()
+  GetSupplier(): Observable<any> 
   {
-      return this.http.get<any>(this.baseUrl+"/Supplier");
+    return this.http.get<any>(this.baseUrl+"/Supplier");
   }
 
-  DeleteSupplier(id:number)
+  GetSupplierById(id:any):Observable<any>
+  {
+    return this.http.get<any>(`${this.baseUrl}/Supplier/${id}`)
+  }
+
+  EditSupplier(data: any, id:number): Observable<any> 
+  {
+    return this.http.put(`${this.baseUrl}/Supplier/${id}`, data)
+  }
+
+  DeleteSupplier(id:number): Observable<any>
   {
      return this.http.delete(this.baseUrl+"/Supplier/"+id);
   }
-  
+
 }
