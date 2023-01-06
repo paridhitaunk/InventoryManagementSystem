@@ -14,35 +14,6 @@ export class InventoryServicesService {
   baseUrl:string = "http://localhost:3000";
 
   // supplier = new SupplierForm();
-
-  s = new Subject();
-  baseUrl:string = "http://localhost:3000";
-    constructor(private http:HttpClient) { }
-  
-    
-    AddProduct(data: any): Observable<any> 
-    {
-      return this.http.post<any>(`${this.baseUrl}/Product`, data)
-    }
-    GetProduct(): Observable<any> 
-    {
-      return this.http.get<any>(`${this.baseUrl}/Product`)
-    }
-    // GetData(id:number)
-    // {
-    //   this.s.next(id);
-    // }
-    GetProductById(id:any):Observable<any>
-    {
-      return this.http.get<any>(`${this.baseUrl}/Product/${id}`)
-    }
-    UpdateProduct(data: any, id:number): Observable<any> 
-    {
-      return this.http.put(`${this.baseUrl}/product/${id}`, data)
-    }
-    DeleteProduct(id: number): Observable<any>{
-      return this.http.delete(`${this.baseUrl}/product/${id}`)
-  }
   
   supplierId = new Subject(); //Subject gives upcoming value
   // setSupplierId(id:any){
