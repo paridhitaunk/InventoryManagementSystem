@@ -1,4 +1,49 @@
 {
+  "OrderDetails": [
+    {
+      "orderId": "132",
+      "pId": "23",
+      "oNoOfProducts": "2321",
+      "oAmount": "32435",
+      "oDate": "12",
+      "oStatus": "Pending",
+      "oPayment": "Pending",
+      "oPaymentType": "CashOnDelivery",
+      "id": 1
+    },
+    {
+      "orderId": "201",
+      "pId": "23",
+      "oNoOfProducts": "4549",
+      "oAmount": "5544309",
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Processing",
+      "oDate": "2023-01-18T18:30:00.000Z",
+      "oStatus": "Pending",
+      "id": 2
+    },
+    {
+      "orderId": "201",
+      "pId": "34",
+      "oNoOfProducts": "233",
+      "oAmount": "55500",
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Pending",
+      "oDate": "2023-01-01T18:30:00.000Z",
+      "oStatus": "Pending",
+      "id": 3
+    }
+  ],
+  "Users": [
+    {
+      "name": "Nidhiva",
+      "email": "nidhivarthi.yash@gmail.com",
+      "password": "123456nn",
+      "role": "Intermediate",
+      "mobile": "1234465938",
+      "id": 1
+    }
+  ],
   "User": [
     {
       "id": 1,
@@ -13,10 +58,9 @@
       "postId": 1
     }
   ],
-  "Orders":[
+  "Orders": [
     {
       "name": "typicode"
     }
-  ] 
-  
+  ]
 }

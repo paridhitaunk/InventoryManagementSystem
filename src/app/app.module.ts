@@ -83,17 +83,24 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { ModelComponent } from './Login/model/model.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
-
 import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignUpComponent } from './Login/sign-up/sign-up.component';
+import { SignInComponent } from './Login/sign-in/sign-in.component';
+import { OrderDetailsComponent } from './Order/order-details/order-details.component';
+import { OrderlistComponent } from './Order/orderlist/orderlist.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductComponent
+    AddProductComponent,
+    SignUpComponent,
+    SignInComponent,
+    OrderDetailsComponent,
+    OrderlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -101,7 +108,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     A11yModule,
-
     ClipboardModule,
 
     CdkStepperModule,
