@@ -1,4 +1,28 @@
 {
+  "Supplier": [
+    {
+      "sId": "123",
+      "sName": "Deepa vishwakarma",
+      "sPhoneNumber": "9876542357",
+      "sAddress": "Bombay",
+      "id": 25
+    },
+    {
+      "sId": "23",
+      "sName": "Adi",
+      "sPhoneNumber": "8765432121",
+      "sAddress": "Goa",
+      "id": 27
+    },
+    {
+      "sId": "111",
+      "sName": "Harsha",
+      "sPhoneNumber": "1234567890",
+      "sAddress": "Bombay",
+      "id": 28
+    }
+  ],
+
   "User": [
     {
       "id": 1,
@@ -6,6 +30,7 @@
       "author": "typicode"
     }
   ],
+
   "Product": [
     {
       "pId": "E234",
@@ -17,6 +42,7 @@
       "id": 4
     }
   ],
+  
   "Orders": [
     {
       "name": "typicode"
