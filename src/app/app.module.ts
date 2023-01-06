@@ -93,13 +93,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './Admin/admin/admin.component';
 import { MakePaymentComponent } from './Admin/make-payment/make-payment.component';
 import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
+import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     AdminComponent,
     MakePaymentComponent,
-    ReportQualityComponent
+    ReportQualityComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
