@@ -90,10 +90,12 @@ import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './Product/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductComponent
+    AddProductComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
