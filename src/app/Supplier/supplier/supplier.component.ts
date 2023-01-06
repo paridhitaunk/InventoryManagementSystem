@@ -43,9 +43,6 @@ export class SupplierComponent implements OnInit {
   //         });
   //   }
   
-  color:string='lightpink';
-
-  
   EditSupplier(details:any)
   {
     this.dialog.open(EditSupplierComponent,{
