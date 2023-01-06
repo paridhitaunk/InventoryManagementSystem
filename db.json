@@ -1,7 +1,7 @@
 {
   "Supplier": [
     {
-      "sId": "1111",
+      "sId": "98",
       "sName": "Deepa vishwakarma",
       "sPhoneNumber": "9876542357",
       "sAddress": "Bombay",
@@ -9,7 +9,7 @@
     },
     {
       "sId": "23",
-      "sName": "Adi",
+      "sName": "Aditya",
       "sPhoneNumber": "8765432121",
       "sAddress": "Goa",
       "id": 27
@@ -27,6 +27,34 @@
       "sPhoneNumber": "8973999939",
       "sAddress": "Indore",
       "id": 29
+    },
+    {
+      "sId": "67",
+      "sName": "Naina",
+      "sPhoneNumber": "9800098000",
+      "sAddress": "Vidisha",
+      "id": 30
+    },
+    {
+      "sId": "28",
+      "sName": "Piyush ",
+      "sPhoneNumber": "8769087690",
+      "sAddress": "Goa",
+      "id": 31
+    },
+    {
+      "sId": "56",
+      "sName": "Yogi",
+      "sPhoneNumber": "9870078999",
+      "sAddress": "Bhopal",
+      "id": 32
+    },
+    {
+      "sId": "68",
+      "sName": "Nammu",
+      "sPhoneNumber": "5678945678",
+      "sAddress": "Nagpur",
+      "id": 33
     }
   ],
   "User": [
