@@ -33,9 +33,13 @@
 
   "Product": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "pId": "E234",
+      "pName": "Laptop",
+      "pPrice": "45000",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2029-10-15T18:30:00.000Z",
+      "pAvailabiltyCount": 22,
+      "id": 4
     }
   ],
   

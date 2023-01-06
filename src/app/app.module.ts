@@ -90,8 +90,12 @@ import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
+
+
+import { ProductComponent } from './Product/product/product.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +103,7 @@ import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.compo
     AddProductComponent,
     SupplierComponent,
     AddSupplierComponent
+    ProductComponent
   ],
   imports: [
     BrowserModule,
