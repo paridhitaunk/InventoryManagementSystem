@@ -14,7 +14,7 @@ import { EditSupplierComponent } from '../edit-supplier/edit-supplier.component'
 export class SupplierComponent implements OnInit {
 
   Supplier_LIST: SupplierForm[];
-  displayedColumns = [ 'sId', 'sName' ,'sPhoneNumber', 'sAddress','Action'];
+  displayedColumns = [ 'sId', 'sName' ,'sPhoneNumber', 'sAddress','Edit','Delete'];
 
   constructor(public dialog: MatDialog,private service:InventoryServicesService){}
 

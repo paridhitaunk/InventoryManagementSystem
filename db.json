@@ -1,8 +1,8 @@
 {
   "Supplier": [
     {
-      "sId": "98",
-      "sName": "Deepa vishwakarma",
+      "sId": "45",
+      "sName": "Harsha",
       "sPhoneNumber": "9876542357",
       "sAddress": "Bombay",
       "id": 25
@@ -13,13 +13,6 @@
       "sPhoneNumber": "8765432121",
       "sAddress": "Goa",
       "id": 27
-    },
-    {
-      "sId": "111",
-      "sName": "Harsha",
-      "sPhoneNumber": "1234567890",
-      "sAddress": "Bombay",
-      "id": 28
     },
     {
       "sId": "34",
@@ -55,6 +48,13 @@
       "sPhoneNumber": "5678945678",
       "sAddress": "Nagpur",
       "id": 33
+    },
+    {
+      "sId": "76",
+      "sName": "Deepa ",
+      "sPhoneNumber": "1234567890",
+      "sAddress": "Jaipur",
+      "id": 34
     }
   ],
   "User": [

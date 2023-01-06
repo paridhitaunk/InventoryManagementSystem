@@ -1,8 +1,17 @@
-.example-container {
+  .example-container {
     height: 600px;
     overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
   }
-  
+
   table {
     width: 100%;
+  }
+
+  .header{
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(33, 24, 76);
   }
