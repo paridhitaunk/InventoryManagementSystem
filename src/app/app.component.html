@@ -5,13 +5,21 @@
   
    <a mat-list-item routerLink="./about-us" >
       <mat-icon style="float:left">dehaze</mat-icon> &nbsp;
-    <span>Course List</span>
+    <span>Home</span>
    </a>
   
    <a mat-list-item>
-      &nbsp; <span>Add New Course</span> &nbsp;
+      &nbsp; <span>Order Details</span> &nbsp;
        <mat-icon style="float:left">add_box</mat-icon>
    </a>
+   <a mat-list-item>
+    &nbsp; <span> Product Detail</span> &nbsp;
+     <mat-icon style="float:left">add_box</mat-icon>
+ </a>
+ <a mat-list-item>
+  &nbsp; <span>Supplier Details</span> &nbsp;
+   <mat-icon style="float:left">add_box</mat-icon>
+</a>
    </mat-nav-list>
  </mat-sidenav>
   
@@ -25,15 +33,7 @@
       <mat-label>Home</mat-label>
      </a>
   
-   <a mat-button class="menu" routerLink="./register">
-      <mat-icon>person_add</mat-icon>
-      <mat-label>Register</mat-label>
-     </a>
-    
-     <a mat-button class="menu" routerLink="./login">
-      <mat-icon>account_circle</mat-icon>
-      Login
-     </a> 
+  
 
    <a mat-button [matMenuTriggerFor]="dropdown" class="menu">
       <mat-icon>expand_more</mat-icon>

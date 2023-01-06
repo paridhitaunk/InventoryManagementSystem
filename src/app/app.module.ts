@@ -90,10 +90,16 @@ import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './Admin/admin/admin.component';
+import { MakePaymentComponent } from './Admin/make-payment/make-payment.component';
+import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductComponent
+    AddProductComponent,
+    AdminComponent,
+    MakePaymentComponent,
+    ReportQualityComponent
   ],
   imports: [
     BrowserModule,
