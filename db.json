@@ -1,32 +1,28 @@
 {
   "Supplier": [
     {
-      "sId": "124",
       "sName": "Deepa ",
       "sPhoneNumber": "9876542357",
       "sAddress": "Bombay",
-      "id": 25
+      "id": 125
     },
     {
-      "sId": "23",
       "sName": "Adi",
       "sPhoneNumber": "8765432121",
       "sAddress": "Goa",
-      "id": 27
+      "id": 127
     },
     {
-      "sId": "111",
       "sName": "Harsha",
       "sPhoneNumber": "1234567890",
       "sAddress": "Bombay",
-      "id": 28
+      "id": 128
     },
     {
-      "sId": "43",
       "sName": "Nammu",
       "sPhoneNumber": "8989800088",
       "sAddress": "Hyderabad",
-      "id": 29
+      "id": 129
     }
   ],
   "User": [
@@ -38,27 +34,31 @@
   ],
   "Product": [
     {
-      "pId": "E234",
       "pName": "Laptop",
       "pPrice": "45000",
       "pMfgDate": "2022-12-31T18:30:00.000Z",
       "pExpiryDate": "2029-10-15T18:30:00.000Z",
       "pAvailabiltyCount": 223,
-      "id": 4
+      "id": 101
     },
     {
-      "pId": "E345",
       "pName": "HeadPhones",
       "pPrice": "1300",
       "pMfgDate": "2023-01-09T18:30:00.000Z",
       "pExpiryDate": "2023-01-23T18:30:00.000Z",
       "pAvailabiltyCount": 20,
-      "id": 5
+      "id": 102
     }
   ],
-  "Orders": [
+  "OrderDetails": [
     {
-      "name": "typicode"
+      "id": "123",
+      "oNoOfProducts": "12",
+      "oAmount": "212334",
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Done",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Delivered"
     }
   ]
 }

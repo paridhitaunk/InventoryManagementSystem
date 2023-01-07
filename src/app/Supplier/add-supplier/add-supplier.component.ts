@@ -11,10 +11,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class AddSupplierComponent {
   isEdit: boolean = false;
-  id: number;
 
   SupplierForm = this.fb.group({
-    sId: ['', [Validators.required]],
+    id: ['', [Validators.required]],
     sName: ['', [Validators.required, Validators.maxLength(32)]],
     sPhoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
     sAddress: ['', Validators.required]
@@ -27,8 +26,7 @@ export class AddSupplierComponent {
       this.service.GetSupplierById(id).subscribe({
         next: (res) => {
           this.isEdit = true;
-          this.id = res.id;
-          this.SupplierForm.value.sId = res.sId;
+          this.SupplierForm.value.id = res.id;
           this.SupplierForm.value.sName = res.sName;
           this.SupplierForm.value.sPhoneNumber = res.sPhoneNumber;
           this.SupplierForm.value.sAddress = res.sAddress;
@@ -39,8 +37,8 @@ export class AddSupplierComponent {
 
     if (this.editData) {
       this.isEdit = true;
-      this.id = this.editData.id;
-      this.SupplierForm.controls['sId'].setValue(this.editData.sId)
+     
+      this.SupplierForm.controls['id'].setValue(this.editData.id)
       this.SupplierForm.controls['sName'].setValue(this.editData.sName)
       this.SupplierForm.controls['sPhoneNumber'].setValue(this.editData.sPhoneNumber)
       this.SupplierForm.controls['sAddress'].setValue(this.editData.sAddress)
@@ -63,8 +61,8 @@ export class AddSupplierComponent {
 
     }
     else {
-      this.service.EditSupplier(this.SupplierForm.value, this.id).subscribe();
-      console.log(this.id);
+      this.service.EditSupplier(this.SupplierForm.value).subscribe();
+      
       console.log(this.SupplierForm.value)
       this.DialogRef.close('edit');
       alert("Supplier Edited Successfully")

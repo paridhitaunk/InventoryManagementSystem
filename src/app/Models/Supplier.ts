@@ -1,8 +1,8 @@
 export class SupplierForm{
 
-    sId:string='';
-    sName:string='';  
-    sPhoneNumber:string='';  
-    sAddress:string='';  
+    id:number;
+    sName:string;  
+    sPhoneNumber:string;  
+    sAddress:string;  
   
 }

@@ -1,10 +1,10 @@
 export class Order
 {
-  orderId:number;
+  id:number;
   oNoOfProducts:string;
   oAmount:string;
   oDate:string;
-  oStatus:string;
   oPayment:string;
   oPaymentType:string;
+  oStatus:string;
 }

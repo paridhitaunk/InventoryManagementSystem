@@ -10,7 +10,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class AddProductComponent {
   ProductForm = this.fb.group({
-    pId: ['',[Validators.required]],
+    id: ['',[Validators.required]],
     pName: ['',[Validators.required,Validators.pattern('[a-zA-Z]*'),Validators.minLength(2)]],
     pPrice: ['',[Validators.required]],
     pMfgDate: ['',[Validators.required]],
@@ -18,7 +18,7 @@ export class AddProductComponent {
     pAvailabiltyCount: ['',Validators.required]
 })
 isEdit:boolean=false;
-id:number;
+
 bName:string;
 constructor(private fb:FormBuilder,private service:InventoryServicesService,private DialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public editData:any){}
 
@@ -30,8 +30,7 @@ ngOnInit()
         next:(res)=>
         {
           this.isEdit=true;
-          this.id = res.id;
-          this.ProductForm.value.pId=res.pId
+          this.ProductForm.value.id=res.id
           this.ProductForm.value.pName=res.pName
           this.ProductForm.value.pPrice=res.pPrice
           this.ProductForm.value.pMfgDate=res.pMfgDate
@@ -45,8 +44,7 @@ ngOnInit()
   if(this.editData)
   {
     this.isEdit=true;
-    this.id = this.editData.id;
-    this.ProductForm.controls['pId'].setValue(this.editData.pId)
+    this.ProductForm.controls['id'].setValue(this.editData.id)
     this.ProductForm.controls['pName'].setValue(this.editData.pName)
     this.ProductForm.controls['pPrice'].setValue(this.editData.pPrice)
     this.ProductForm.controls['pMfgDate'].setValue(this.editData.pMfgDate)
@@ -66,9 +64,9 @@ onSubmit(){
   this.DialogRef.close('save');
 }
 else{
-  this.service.UpdateProduct(this.ProductForm.value,this.id).subscribe();
+  this.service.UpdateProduct(this.ProductForm.value).subscribe();
     // this.ProductForm.reset();
-    console.log(this.id);
+    console.log(this.ProductForm.value.id);
     console.log(this.ProductForm.value)
   this.DialogRef.close('edit');
 }

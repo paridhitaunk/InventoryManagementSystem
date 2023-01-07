@@ -7,8 +7,8 @@
     <mat-form-field  appearance="fill" class="custom-form-field">
       <mat-label>OrderId</mat-label>
       <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
-      <input matInput="" placeholder="Enter OrderId" formControlName="orderId" class="form-input-field" id="orderId" >
-      <mat-error *ngIf="errorFunc('orderId', 'required')">Name is required</mat-error>
+      <input matInput="" placeholder="Enter OrderId" formControlName="id" class="form-input-field" id="id" >
+      <mat-error *ngIf="errorFunc('id', 'required')">Name is required</mat-error>
     </mat-form-field>
   </div>
   <div class="card">
@@ -22,10 +22,10 @@
 
   <div class="card">
     <mat-form-field   appearance="fill" class="custom-form-field">
-        <mat-label>NoOfProduct Ordered</mat-label>
+        <mat-label>Quantity Ordered</mat-label>
             <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
             <input matInput="" placeholder="enter oNoOfProducts" formControlName="oNoOfProducts" class="form-input-field" id="oNoOfProducts">
-            <mat-error *ngIf="errorFunc('oNoOfProducts', 'required')">oNoOfProducts is required</mat-error>
+            <mat-error *ngIf="errorFunc('oNoOfProducts', 'required')">Quantity is required</mat-error>
        </mat-form-field>   
   </div>
 
@@ -36,7 +36,7 @@
         <mat-label>OrderAmount</mat-label>
             <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
             <input matInput="" placeholder="enter oAmount" formControlName="oAmount" class="form-input-field" id="oAmount">
-            <mat-error *ngIf="errorFunc('oAmount', 'required')">oNoOfProducts is required</mat-error>
+            <mat-error *ngIf="errorFunc('oAmount', 'required')">Amount is required</mat-error>
             </mat-form-field>
   </div>
 
@@ -46,7 +46,7 @@
         <input matInput [matDatepicker]="picker" color="accent" formControlName="oDate" id="oDate">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker textprimary></mat-datepicker>
-        <mat-error *ngIf="errorFunc('oDate', 'required')">oDate is required</mat-error>
+        <mat-error *ngIf="errorFunc('oDate', 'required')">oreder Date is required</mat-error>
       </mat-form-field>
     </div>
 
@@ -58,7 +58,7 @@
         <select matNativeControl formControlName="oStatus" id="oStatus" >
           <option value="Delivered">Delivered</option>
           <option value="Pending">Pending</option>
-          <option value="Cancel">Cancel</option>
+          <option value="Cancel">Cancelled</option>
         </select>
         <mat-error *ngIf="errorFunc('oStatus', 'required')">Please select the Stauts </mat-error>
       </mat-form-field>
@@ -85,8 +85,8 @@
           <mat-label>PaymentType</mat-label>
           <mat-icon class="material-icons" color="accent" matSuffix>cached</mat-icon>
           <select matNativeControl formControlName="oPaymentType" id="oPaymentType" >
-            <option value="CashOnDeleviery">CashOnDeleviery</option>
-            <option value="UPI PaymentMethods">UPI PaymentMethods</option>
+            <option value="CashOnDeleviery">Cash On Delivery</option>
+            <option value="UPI PaymentMethods">UPI </option>
             <option value="Card-Based Payment">Card-Based Payment</option>
           </select>
           <mat-error *ngIf="errorFunc('oPaymentType', 'required')">Please select the Role </mat-error>

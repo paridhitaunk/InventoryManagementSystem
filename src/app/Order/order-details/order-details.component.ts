@@ -20,7 +20,7 @@ export class OrderDetailsComponent {
 
   ngOnInit(): void {
     this.orderDetailsform=this.fb.group({
-      orderId: new FormControl('', [Validators.required]),
+      id: new FormControl('', [Validators.required]),
       pId: new FormControl('', [Validators.required]),
       oNoOfProducts: new FormControl('', [Validators.required]),
       oAmount:new FormControl('',[Validators.required]),
@@ -41,7 +41,7 @@ export class OrderDetailsComponent {
     console.log("RequiredDataisValid");
     this.rs.saveorderDetails(this.orderDetailsform.value).subscribe();
     alert('you are successfully Register');
-    this._Router.navigate(['order-list']);
+    // this._Router.navigate(['order-list']);
    
     }
     else
