@@ -1,0 +1,36 @@
+<mat-card class="example-card">
+    <div class="form" >
+        <mat-card-header>
+            <mat-card-title>Report quality issue</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+        <form class="example-form" >
+          <mat-form-field appearance="fill">
+            <mat-label>Order Id</mat-label>
+            <input matInput placeholder="enter the order Id" readonly>
+           
+            </mat-form-field>  &nbsp;
+              <mat-form-field appearance="fill">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="enter the name of Product" readonly>
+                
+                </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <textarea matInput placeholder="Enter Issue"></textarea>
+                  </mat-form-field>&nbsp;
+        
+                <br>
+            
+          <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button  style="margin-left: 8px;" mat-raised-button color="accent">Report</button>
+          
+          </div>
+        </form>
+        </mat-card-content>
+        </div>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </mat-card-footer>
+    </mat-card>
