@@ -219,4 +219,3 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }

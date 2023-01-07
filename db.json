@@ -2,7 +2,7 @@
   "Supplier": [
     {
       "sId": "124",
-      "sName": "Deepa vishwakarma",
+      "sName": "Deepa ",
       "sPhoneNumber": "9876542357",
       "sAddress": "Bombay",
       "id": 25
@@ -20,6 +20,13 @@
       "sPhoneNumber": "1234567890",
       "sAddress": "Bombay",
       "id": 28
+    },
+    {
+      "sId": "43",
+      "sName": "Nammu",
+      "sPhoneNumber": "8989800088",
+      "sAddress": "Hyderabad",
+      "id": 29
     }
   ],
   "User": [
