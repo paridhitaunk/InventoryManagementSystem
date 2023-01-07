@@ -102,7 +102,7 @@ import { ProductComponent } from './Product/product/product.component';
     AppComponent,
     AddProductComponent,
     SupplierComponent,
-    AddSupplierComponent
+    AddSupplierComponent,
     ProductComponent
   ],
   imports: [

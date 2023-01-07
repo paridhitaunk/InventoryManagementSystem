@@ -8,10 +8,6 @@ import { SupplierForm } from 'src/app/Model/Supplier';
 })
 
 export class InventoryServicesService {
-  
-  constructor(private http:HttpClient) { }
-  
-  baseUrl:string = "http://localhost:3000";
 
   // supplier = new SupplierForm();
 
