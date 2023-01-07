@@ -2,52 +2,47 @@
   <mat-sidenav #sidenav>
     <mat-nav-list (click)="sidenav.close()">
 
-      <a mat-list-item routerLink="supplier">
+      <a mat-list-item routerLink="/order">
+        <mat-icon style="float:left">dehaze</mat-icon> &nbsp;
+        <span>Orders</span>
+      </a>
+
+      <a mat-list-item routerLink="/product">
+        <mat-icon style="float:left">dehaze</mat-icon> &nbsp;
+        <span>Products</span>
+      </a>
+
+      <a mat-list-item routerLink="/supplier">
         <mat-icon style="float:left">dehaze</mat-icon> &nbsp;
         <span>Supplier</span>
       </a>
 
+
+
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" style="height: 60px;">
     <button mat-icon-button (click)="sidenav.open()">
       <mat-icon>apps</mat-icon>
     </button>
-
-    <a mat-raised-button color="accent" class="menu" routerLink="supplier">
-      <mat-icon>home</mat-icon>
-      <mat-label>Supplier</mat-label>
-    </a>
-
-    <a mat-button class="menu">
-      <mat-icon>person_add</mat-icon>
-      <mat-label>Register</mat-label>
-    </a>
-
-    <a mat-button class="menu">
-      <mat-icon>account_circle</mat-icon>
-      Login
-    </a>
-
-    <a mat-button [matMenuTriggerFor]="dropdown" class="menu">
-      <mat-icon>expand_more</mat-icon>
-      About us
-    </a>
-
-    <mat-menu #dropdown>
-
-      <button mat-menu-item>
-        <mat-icon>message</mat-icon>
-        CEO Message
-      </button>
-
-      <button mat-menu-item>Contact Us
-        <mat-icon>phone</mat-icon>
-      </button>
-
-    </mat-menu>
+    
+    <button mat-raised-button color="accent" style="height: 60px ;margin-left: 340px; text-align: center; font-size: larger;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Inventory Management System</button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
   </mat-toolbar>
+
+  <!-- <app-admin-dashboard></app-admin-dashboard>
+  <app-admin></app-admin>
+
+  <app-product></app-product>
+  <app-orderlist></app-orderlist>
+  <app-supplier></app-supplier> -->
 
   <router-outlet></router-outlet>
 
