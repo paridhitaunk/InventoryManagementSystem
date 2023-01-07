@@ -1,0 +1,102 @@
+<h1 style="font-weight: bold; color:indigo; text-align:center" >PURCHASE ORDER <i class="fa fa-first-order" aria-hidden="true"></i></h1>
+<div class="container">
+  <div class="head"><h4  >Order Details</h4></div>
+  
+  <form [formGroup]="orderDetailsform" (ngSubmit)="orderFunc()" novalidate>
+    <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+      <mat-label>OrderId</mat-label>
+      <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
+      <input matInput="" placeholder="Enter OrderId" formControlName="orderId" class="form-input-field" id="orderId" >
+      <mat-error *ngIf="errorFunc('orderId', 'required')">Name is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+      <mat-label>Product Id</mat-label>
+      <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
+      <input matInput="" placeholder="Enter ProductId" formControlName="pId" class="form-input-field" id="pId">
+      <mat-error *ngIf="errorFunc('pId', 'required')">ProductId is required</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="card">
+    <mat-form-field   appearance="fill" class="custom-form-field">
+        <mat-label>NoOfProduct Ordered</mat-label>
+            <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
+            <input matInput="" placeholder="enter oNoOfProducts" formControlName="oNoOfProducts" class="form-input-field" id="oNoOfProducts">
+            <mat-error *ngIf="errorFunc('oNoOfProducts', 'required')">oNoOfProducts is required</mat-error>
+       </mat-form-field>   
+  </div>
+
+
+  
+  <div class="card">
+    <mat-form-field appearance="fill" class="custom-form-field">
+        <mat-label>OrderAmount</mat-label>
+            <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
+            <input matInput="" placeholder="enter oAmount" formControlName="oAmount" class="form-input-field" id="oAmount">
+            <mat-error *ngIf="errorFunc('oAmount', 'required')">oNoOfProducts is required</mat-error>
+            </mat-form-field>
+  </div>
+
+  <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+        <mat-label>Ordered Date</mat-label>
+        <input matInput [matDatepicker]="picker" color="accent" formControlName="oDate" id="oDate">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker textprimary></mat-datepicker>
+        <mat-error *ngIf="errorFunc('oDate', 'required')">oDate is required</mat-error>
+      </mat-form-field>
+    </div>
+
+
+  <div class="card">
+    <mat-form-field  appearance="fill"class="custom-form-field">
+        <mat-label>Order Status</mat-label>
+        <mat-icon class="material-icons" color="accent" matSuffix>cached</mat-icon>
+        <select matNativeControl formControlName="oStatus" id="oStatus" >
+          <option value="Delivered">Delivered</option>
+          <option value="Pending">Pending</option>
+          <option value="Cancel">Cancel</option>
+        </select>
+        <mat-error *ngIf="errorFunc('oStatus', 'required')">Please select the Stauts </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div class="card">
+      <mat-form-field  appearance="fill"class="custom-form-field">
+          <mat-label>PaymentStatus</mat-label>
+          <mat-icon class="material-icons" color="accent" matSuffix>cached</mat-icon>
+          <select matNativeControl formControlName="oPayment" id="oPayment" >
+            <option value="Done">Done</option>
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+          </select>
+          <mat-error *ngIf="errorFunc('oPayment', 'required')">Please select the Payment</mat-error>
+        </mat-form-field>
+      </div>
+
+
+
+    <div class="card">
+      <mat-form-field  appearance="fill"class="custom-form-field">
+          <mat-label>PaymentType</mat-label>
+          <mat-icon class="material-icons" color="accent" matSuffix>cached</mat-icon>
+          <select matNativeControl formControlName="oPaymentType" id="oPaymentType" >
+            <option value="CashOnDeleviery">CashOnDeleviery</option>
+            <option value="UPI PaymentMethods">UPI PaymentMethods</option>
+            <option value="Card-Based Payment">Card-Based Payment</option>
+          </select>
+          <mat-error *ngIf="errorFunc('oPaymentType', 'required')">Please select the Role </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="Mybutton">
+        <mat-card-content class="custom-form-field">
+            <button mat-raised-button color="primary" type="submit" value="submit" center>Proceed</button>
+        </mat-card-content>
+      </div>
+  </form>
+</div>

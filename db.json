@@ -1,7 +1,7 @@
 {
   "Supplier": [
     {
-      "sId": "123",
+      "sId": "124",
       "sName": "Deepa vishwakarma",
       "sPhoneNumber": "9876542357",
       "sAddress": "Bombay",
@@ -22,7 +22,6 @@
       "id": 28
     }
   ],
-
   "User": [
     {
       "id": 1,
@@ -30,7 +29,6 @@
       "author": "typicode"
     }
   ],
-
   "Product": [
     {
       "pId": "E234",
@@ -51,7 +49,6 @@
       "id": 5
     }
   ],
-  
   "Orders": [
     {
       "name": "typicode"

@@ -62,11 +62,6 @@ export class AddSupplierComponent {
       window.location.reload();
 
     }
-
-
-
-
-
     else {
       this.service.EditSupplier(this.SupplierForm.value, this.id).subscribe();
       console.log(this.id);
@@ -74,10 +69,8 @@ export class AddSupplierComponent {
       this.DialogRef.close('edit');
       alert("Supplier Edited Successfully")
       window.location.reload();
-
     }
   }
-
   reset() {
     this.SupplierForm.reset();
   }

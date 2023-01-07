@@ -39,7 +39,7 @@
                 <mat-icon matSuffix>location_on</mat-icon>
                 <input matInput #sAddress maxlength="60" formControlName="sAddress" matInput
                     placeholder="Enter Supplier Address" required>
-                <mat-hint align="end">{{sAddress.value.length}} / 60</mat-hint>
+                <mat-hint [align]="'end'">{{sAddress.value.length}} / 60</mat-hint>
                 <mat-error>*Supplier Address is required</mat-error>
             </mat-form-field>
         </div>
