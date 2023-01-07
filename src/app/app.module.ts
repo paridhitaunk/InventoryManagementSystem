@@ -93,6 +93,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
 import { EditSupplierComponent } from './Supplier/edit-supplier/edit-supplier.component';
+import { ReceivePaymentComponent } from './Supplier/receive-payment/receive-payment.component';
+import { SupplyStockComponent } from './Supplier/supply-stock/supply-stock.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +102,9 @@ import { EditSupplierComponent } from './Supplier/edit-supplier/edit-supplier.co
     AddProductComponent,
     SupplierComponent,
     AddSupplierComponent,
-    EditSupplierComponent
+    EditSupplierComponent,
+    ReceivePaymentComponent,
+    SupplyStockComponent
   ],
   imports: [
     BrowserModule,

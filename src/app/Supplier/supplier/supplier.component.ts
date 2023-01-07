@@ -56,7 +56,3 @@ export class SupplierComponent implements OnInit {
     window.location.reload();
   }
 }
-
-export class DialogAnimationsExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) {}
-}
