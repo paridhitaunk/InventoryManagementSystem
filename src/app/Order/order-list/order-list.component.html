@@ -1,0 +1,42 @@
+<br>
+<br>
+<table [border]='1'>
+
+    <tr>
+
+        <td>OrderId</td>
+
+        <td>Product Id</td>
+
+        <td>NoOfProducts</td>
+
+        <td>OrderAmount</td>
+
+        <td>Order Date</td>
+        
+        <td>Order Status</td>
+        <td>Payment Status</td>
+        <td>Payment Type</td>
+
+    </tr>
+
+    <tr  *ngFor = "let e of stu">
+
+        <td>{{e.orderId}}</td>
+
+        <!-- <td>{{e.pId}}</td> -->
+
+        <td>{{e.oNoOfProducts}}</td>
+
+        <td>{{e.oAmount}}</td>
+        <td>{{e.oDate}}</td>
+        <td>{{e.oStatus}}</td>
+
+        <td>{{e.oPayment}}</td>
+        <td>{{e.oPaymentType}}</td>
+
+        <td><button (click)="deleteDataById(e.orderId)" class="btn btn-primary btn-lg" id="submitbtn" name="submit">Delete</button></td>
+
+    </tr>
+
+</table>
