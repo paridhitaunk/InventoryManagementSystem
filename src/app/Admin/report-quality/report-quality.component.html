@@ -4,27 +4,27 @@
             <mat-card-title>Report quality issue</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-        <form class="example-form" >
+        <form class="example-form" [formGroup]="orderDetailsform">
           <mat-form-field appearance="fill">
             <mat-label>Order Id</mat-label>
-            <input matInput placeholder="enter the order Id" readonly>
+            <input matInput placeholder="enter the order Id" formControlName="id" readonly >
            
             </mat-form-field>  &nbsp;
               <mat-form-field appearance="fill">
                 <mat-label>Product Name</mat-label>
-                <input matInput placeholder="enter the name of Product" readonly>
+                <input matInput placeholder="enter the name of Product" formControlName="productName" readonly>
                 
                 </mat-form-field>
                   <br>
                   <mat-form-field>
-                    <textarea matInput placeholder="Enter Issue"></textarea>
+                    <textarea matInput placeholder="Enter Issue" formControlName="reportIssue"></textarea>
                   </mat-form-field>&nbsp;
         
                 <br>
             
           <div mat-dialog-action [align]="'end'">
             <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-            <button  style="margin-left: 8px;" mat-raised-button color="accent">Report</button>
+            <button  style="margin-left: 8px;" mat-raised-button color="accent" (click)="raiseIssueReport()">Report</button>
           
           </div>
         </form>
@@ -34,4 +34,3 @@
             <mat-progress-bar mode="indeterminate"></mat-progress-bar>
           </mat-card-footer>
     </mat-card>
-

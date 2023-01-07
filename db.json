@@ -1,4 +1,30 @@
 {
+  "Supplier": [
+    {
+      "sName": "Deepa ",
+      "sPhoneNumber": "9876542357",
+      "sAddress": "Bombay",
+      "id": 125
+    },
+    {
+      "sName": "Adi",
+      "sPhoneNumber": "8765432121",
+      "sAddress": "Goa",
+      "id": 127
+    },
+    {
+      "sName": "Harsha",
+      "sPhoneNumber": "1234567890",
+      "sAddress": "Bombay",
+      "id": 128
+    },
+    {
+      "sName": "Nammu",
+      "sPhoneNumber": "8989800088",
+      "sAddress": "Hyderabad",
+      "id": 129
+    }
+  ],
   "User": [
     {
       "id": 1,
@@ -8,15 +34,46 @@
   ],
   "Product": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "pName": "Laptop",
+      "pPrice": "45000",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2029-10-15T18:30:00.000Z",
+      "pAvailabiltyCount": 223,
+      "id": 101
+    },
+    {
+      "pName": "HeadPhones",
+      "pPrice": "1300",
+      "pMfgDate": "2023-01-09T18:30:00.000Z",
+      "pExpiryDate": "2023-01-23T18:30:00.000Z",
+      "pAvailabiltyCount": 20,
+      "id": 102
     }
   ],
-  "Orders":[
+  "OrderDetails": [
     {
-      "name": "typicode"
+      "id": "123",
+      "pId": "102",
+      "productName": "HeadPhones",
+      "oNoOfProducts": "12",
+      "oAmount": "212",
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Done",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": ""
+    },
+    {
+      "id": "124",
+      "pId": "101",
+      "productName": "Laptop",
+      "oNoOfProducts": "10",
+      "oAmount": "500000",
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": "technical issue"
     }
-  ] 
-  
+  ]
 }
