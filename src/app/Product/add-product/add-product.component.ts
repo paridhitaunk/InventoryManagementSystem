@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Validators, FormBuilder } from '@angular/forms';
+import { DialogRef } from '@angular/cdk/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 
 @Component({
   selector: 'app-add-product',

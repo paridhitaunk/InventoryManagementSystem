@@ -120,7 +120,7 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
 
     EditSupplierComponent,
     ReceivePaymentComponent,
-    SupplyStockComponent
+    SupplyStockComponent,
 
     ProductComponent,
     AdminDashboardComponent,
