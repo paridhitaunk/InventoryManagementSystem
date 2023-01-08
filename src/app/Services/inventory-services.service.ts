@@ -52,9 +52,9 @@ export class InventoryServicesService {
     {
       return this.http.get<any>(`${this.baseUrl}/Product/${id}`)
     }
-    UpdateProduct(data: any, id:number): Observable<any> 
+    UpdateProduct(data: any): Observable<any> 
     {
-      return this.http.put(`${this.baseUrl}/product/${id}`, data)
+      return this.http.put(`${this.baseUrl}/product/${data.id}`, data)
     }
     DeleteProduct(id: number): Observable<any>{
       return this.http.delete(`${this.baseUrl}/product/${id}`)
@@ -89,9 +89,9 @@ export class InventoryServicesService {
     return this.http.get<any>(`${this.baseUrl}/Supplier/${id}`)
   }
 
-  EditSupplier(data: any, id:number): Observable<any> 
+  EditSupplier(data: any): Observable<any> 
   {
-    return this.http.put(`${this.baseUrl}/Supplier/${id}`, data)
+    return this.http.put(`${this.baseUrl}/Supplier/${data.id}`, data)
   }
 
   DeleteSupplier(id:number): Observable<any>
@@ -114,10 +114,11 @@ export class InventoryServicesService {
   }
   
 
-  orderGetData():Observable<any[]>
+  orderGetData(): Observable<any> 
   {
-     return this.http.get<any[]>(this.baseUrl+"/OrderDetails");
+    return this.http.get<any>(`${this.baseUrl}/OrderDetails`)
   }
+ 
 
  deleteorderData(orderId:number)
  {

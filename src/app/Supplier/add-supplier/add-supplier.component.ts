@@ -12,9 +12,11 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class AddSupplierComponent {
 
 
+
   SupplierForm!: FormGroup;
 
 
+  
   constructor(private fb: FormBuilder, private service: InventoryServicesService, private DialogRef: DialogRef, @Inject(MAT_DIALOG_DATA) public editData: any) { }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class AddSupplierComponent {
 
   onSubmit() {
 
+
     this.service.AddSupplier(this.SupplierForm.value)
       .subscribe(response => {
         console.log(response)
@@ -39,7 +42,7 @@ export class AddSupplierComponent {
     window.location.reload();
 
   }
-  
+ 
   reset() {
     this.SupplierForm.reset();
   }

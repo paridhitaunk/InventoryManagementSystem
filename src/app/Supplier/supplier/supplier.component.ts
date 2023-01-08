@@ -3,7 +3,9 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { AddSupplierComponent } from '../add-supplier/add-supplier.component';
 import { SupplierForm } from 'src/app/Models/Supplier';
+
 import { EditSupplierComponent } from '../edit-supplier/edit-supplier.component';
+
 
 @Component({
   selector: 'app-supplier',
