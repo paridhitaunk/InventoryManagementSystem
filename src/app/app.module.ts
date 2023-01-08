@@ -104,7 +104,7 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
-import { CreateOrderComponent } from './Order/create-order/create-order.component';
+
 
 @NgModule({
   declarations: [
@@ -120,8 +120,7 @@ import { CreateOrderComponent } from './Order/create-order/create-order.componen
     SignInComponent,
     SignUpComponent,
     OrderDetailsComponent,
-    OrderlistComponent,
-    CreateOrderComponent
+    OrderlistComponent
   ],
   imports: [
     BrowserModule,
