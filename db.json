@@ -8,7 +8,6 @@
       "id": 125
     },
     {
-
       "sId": "23",
       "sName": "Adi",
       "sPhoneNumber": "8765432121",
@@ -57,12 +56,12 @@
       "sAddress": "Jaipur",
       "id": 34
     },
-    
     {
+      "sId": "89",
       "sName": "Nammu",
-      "sPhoneNumber": "8989800088",
-      "sAddress": "Hyderabad",
-      "id": 129
+      "sPhoneNumber": "9866580990",
+      "sAddress": "Goa",
+      "id": 128
     }
   ],
   "User": [
@@ -90,7 +89,6 @@
       "id": 102
     }
   ],
-
   "OrderDetails": [
     {
       "id": "123",
@@ -99,6 +97,36 @@
       "oPaymentType": "CashOnDeleviery",
       "oPayment": "Done",
       "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Delivered"
+    },
+    {
+      "id": "E234",
+      "pId": "111",
+      "oNoOfProducts": "2",
+      "oAmount": "900",
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-03T18:30:00.000Z",
+      "oStatus": "Pending"
+    },
+    {
+      "id": "A34",
+      "pId": "3",
+      "oNoOfProducts": "2",
+      "oAmount": "450",
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Pending",
+      "oDate": "2022-02-01T18:30:00.000Z",
+      "oStatus": "Pending"
+    },
+    {
+      "id": "S32",
+      "pId": "9",
+      "oNoOfProducts": "3",
+      "oAmount": "280",
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Processing",
+      "oDate": "2022-12-31T18:30:00.000Z",
       "oStatus": "Delivered"
     }
   ]

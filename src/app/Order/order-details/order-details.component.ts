@@ -40,13 +40,13 @@ export class OrderDetailsComponent {
     {
     console.log("RequiredDataisValid");
     this.rs.saveorderDetails(this.orderDetailsform.value).subscribe();
-    alert('you are successfully Register');
+    alert('Your order is Successfully registered');
     // this._Router.navigate(['order-list']);
    
     }
     else
     {
-      console.log("DataisNotValid");
+      console.log("Data is Not Valid");
     }
   }
   
