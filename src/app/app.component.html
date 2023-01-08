@@ -1,4 +1,4 @@
-
+<!-- 
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav class="side-nav">
     <mat-nav-list (click)="sidenav.close()">
@@ -27,7 +27,7 @@
       <mat-label>Inventory Management System</mat-label>
     </a>
 
-  </mat-toolbar>
+  </mat-toolbar> -->
   <!-- <app-supplier></app-supplier> -->
   <!-- <app-admin-dashboard></app-admin-dashboard>
   <app-admin></app-admin>
@@ -37,6 +37,18 @@
 
 
    <!-- <app-add-product></app-add-product> -->
-  <router-outlet></router-outlet>
+   <mat-toolbar color="primary">
+    Sign-Up with firebase
+    <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+    <button mat-button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+  </ng-container>
 
-</mat-sidenav-container>
+  <ng-template #loginButton>
+    <button mat-button routerLink="login"><mat-icon>login</mat-icon>Login</button>
+  </ng-template>
+   </mat-toolbar>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+<!-- 
+</mat-sidenav-container> -->

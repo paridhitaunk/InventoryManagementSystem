@@ -107,6 +107,9 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
@@ -224,7 +227,9 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
     ScrollingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
 
   ],
   providers: [],
