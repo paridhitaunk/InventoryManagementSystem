@@ -1,5 +1,6 @@
 export class Order
 {
+
   id:number;
   oNoOfProducts:string;
   oAmount:string;
@@ -7,4 +8,5 @@ export class Order
   oPayment:string;
   oPaymentType:string;
   oStatus:string;
+
 }

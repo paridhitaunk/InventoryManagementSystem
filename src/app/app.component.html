@@ -1,27 +1,42 @@
 
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav class="side-nav">
+    <mat-nav-list (click)="sidenav.close()">
 
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Inventory Management System</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+     <br> 
+    <a mat-raised-button color="accent" class="menu">
+      <mat-icon>home</mat-icon>
+      <mat-label>Dashboard</mat-label>
+    </a>
 
-<!-- <app-orderlist></app-orderlist>
-<app-order-details></app-order-details> -->
-<!-- <app-supplier></app-supplier> -->
-<!-- <app-product></app-product> -->
-<!-- <router-outlet></router-outlet>
-  <app-admin-dashboard></app-admin-dashboard>
+    <br><br>
+      <a mat-raised-button style="background-color: rgb(204, 166, 240);border-radius: 30px;" class="menu" routerLink="supplier">
+        <mat-icon style="float:left;">dehaze</mat-icon> &nbsp;
+        <span>Supplier</span>
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="sidenav.open()">
+      <mat-icon>apps</mat-icon>
+    </button>
+
+    <a mat-raised-button color="accent" class="IMS" style="height: 60px; margin-top: 1px;margin-left: 300px; font-size: x-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+      <mat-label>Inventory Management System</mat-label>
+    </a>
+
+  </mat-toolbar>
+  <!-- <app-supplier></app-supplier> -->
+  <!-- <app-admin-dashboard></app-admin-dashboard>
   <app-admin></app-admin>
-   
+   <app-product></app-product>
    <app-orderlist></app-orderlist> -->
 
+
+
    <!-- <app-add-product></app-add-product> -->
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>

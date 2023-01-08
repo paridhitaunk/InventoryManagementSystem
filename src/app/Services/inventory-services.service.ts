@@ -113,16 +113,12 @@ export class InventoryServicesService {
     return this.http.post<any>(this.baseUrl+"/OrderDetails",obj);
   }
   
+
   orderGetData(): Observable<any> 
   {
     return this.http.get<any>(`${this.baseUrl}/OrderDetails`)
   }
-  
-
-  // orderGetData():Observable<any[]>
-  // {
-  //    return this.http.get<any[]>(this.baseUrl+"/OrderDetails");
-  // }
+ 
 
  deleteorderData(orderId:number)
  {

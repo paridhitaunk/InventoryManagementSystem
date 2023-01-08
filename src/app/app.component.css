@@ -1,3 +1,15 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
+.side-nav{
+    background-color: rgb(43, 13, 70);
+    width: 190px;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+
+.menu{
+    margin-left: 35px;
+}
+
+.toolbar{
+    background-color: rgb(43, 13, 70);
+    height: 70px;
+}

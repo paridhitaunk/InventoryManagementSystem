@@ -90,9 +90,13 @@ import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
-
 import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
+
+import { EditSupplierComponent } from './Supplier/edit-supplier/edit-supplier.component';
+import { ReceivePaymentComponent } from './Supplier/receive-payment/receive-payment.component';
+import { SupplyStockComponent } from './Supplier/supply-stock/supply-stock.component';
+
 
 
 import { ProductComponent } from './Product/product/product.component';
@@ -106,12 +110,18 @@ import { OrderDetailsComponent } from './Order/order-details/order-details.compo
 import { OrderlistComponent } from './Order/order-list/order-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     SupplierComponent,
     AddSupplierComponent,
+
+    EditSupplierComponent,
+    ReceivePaymentComponent,
+    SupplyStockComponent
+
     ProductComponent,
     AdminDashboardComponent,
     AdminComponent,
@@ -121,6 +131,7 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
     SignUpComponent,
     OrderDetailsComponent,
     OrderlistComponent
+
   ],
   imports: [
     BrowserModule,

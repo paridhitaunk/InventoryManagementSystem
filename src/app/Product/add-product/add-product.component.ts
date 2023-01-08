@@ -1,14 +1,12 @@
-import { Component, Inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
-import { DialogRef } from '@angular/cdk/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
+
   ProductForm = this.fb.group({
     id: ['',[Validators.required]],
     pName: ['',[Validators.required,Validators.pattern('[a-zA-Z]*'),Validators.minLength(2)]],
@@ -80,5 +78,6 @@ else{
 reset(){
   this.ProductForm.reset();
 }
+
 
 }

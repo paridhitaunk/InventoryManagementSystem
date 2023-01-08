@@ -10,65 +10,39 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./add-supplier.component.css']
 })
 export class AddSupplierComponent {
-  isEdit: boolean = false;
 
-  SupplierForm = this.fb.group({
-    id: ['', [Validators.required]],
-    sName: ['', [Validators.required, Validators.maxLength(32)]],
-    sPhoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-    sAddress: ['', Validators.required]
-  })
-  // constructor(private fb:FormBuilder,private service:InventoryServicesService) { }
+
+
+  SupplierForm!: FormGroup;
+
+
+  
   constructor(private fb: FormBuilder, private service: InventoryServicesService, private DialogRef: DialogRef, @Inject(MAT_DIALOG_DATA) public editData: any) { }
 
   ngOnInit(): void {
-    this.service.supplierId.subscribe(id => {
-      this.service.GetSupplierById(id).subscribe({
-        next: (res) => {
-          this.isEdit = true;
-          this.SupplierForm.value.id = res.id;
-          this.SupplierForm.value.sName = res.sName;
-          this.SupplierForm.value.sPhoneNumber = res.sPhoneNumber;
-          this.SupplierForm.value.sAddress = res.sAddress;
-        }
-      })
-    });
 
-
-    if (this.editData) {
-      this.isEdit = true;
-     
-      this.SupplierForm.controls['id'].setValue(this.editData.id)
-      this.SupplierForm.controls['sName'].setValue(this.editData.sName)
-      this.SupplierForm.controls['sPhoneNumber'].setValue(this.editData.sPhoneNumber)
-      this.SupplierForm.controls['sAddress'].setValue(this.editData.sAddress)
-
-    }
+    this.SupplierForm = this.fb.group({
+      sId: ['', [Validators.required]],
+      sName: ['', [Validators.required, Validators.maxLength(32)]],
+      sPhoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
+      sAddress: ['', Validators.required]
+    })
   }
 
   onSubmit() {
 
-    if (!this.editData)
-     {
-      this.service.AddSupplier(this.SupplierForm.value)
-        .subscribe(response => {
-          console.log(response)
-        })
-      this.SupplierForm.reset();
-      this.DialogRef.close('save');
-      alert("Supplier added Successfully")
-      window.location.reload();
 
-    }
-    else {
-      this.service.EditSupplier(this.SupplierForm.value).subscribe();
-      
-      console.log(this.SupplierForm.value)
-      this.DialogRef.close('edit');
-      alert("Supplier Edited Successfully")
-      window.location.reload();
-    }
+    this.service.AddSupplier(this.SupplierForm.value)
+      .subscribe(response => {
+        console.log(response)
+      })
+    this.SupplierForm.reset();
+    this.DialogRef.close('save');
+    alert("Supplier added Successfully")
+    window.location.reload();
+
   }
+ 
   reset() {
     this.SupplierForm.reset();
   }

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { AddSupplierComponent } from '../add-supplier/add-supplier.component';
 import { SupplierForm } from 'src/app/Models/Supplier';
+
+import { EditSupplierComponent } from '../edit-supplier/edit-supplier.component';
+
 
 @Component({
   selector: 'app-supplier',
@@ -10,11 +13,10 @@ import { SupplierForm } from 'src/app/Models/Supplier';
   styleUrls: ['./supplier.component.css']
 })
 
-
 export class SupplierComponent implements OnInit {
 
   Supplier_LIST: SupplierForm[];
-  displayedColumns = [ 'sId', 'sName' ,'sPhoneNumber', 'sAddress','Action'];
+  displayedColumns = [ 'sId', 'sName' ,'sPhoneNumber', 'sAddress','Edit','Delete'];
 
   constructor(public dialog: MatDialog,private service:InventoryServicesService){}
 
@@ -33,12 +35,19 @@ export class SupplierComponent implements OnInit {
     });
   }
 
-  color:string='lightpink';
-
+  // openDialog2(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  //     const dialogBox=this.dialog.open(AddSupplierComponent, {
+  //       enterAnimationDuration,
+  //       exitAnimationDuration,
+  //     });
+  //     dialogBox.afterClosed().subscribe(result => {
+  //           console.log(`Dialog result: ${result}`);
+  //         });
+  //   }
   
   EditSupplier(details:any)
   {
-    this.dialog.open(AddSupplierComponent,{
+    this.dialog.open(EditSupplierComponent,{
       data: details
     });
   }
@@ -49,6 +58,3 @@ export class SupplierComponent implements OnInit {
     window.location.reload();
   }
 }
-
-
-
