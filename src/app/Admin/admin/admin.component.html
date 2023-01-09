@@ -5,8 +5,8 @@
 &nbsp;
 <mat-form-field class="formfield" appearance="outline">
 <mat-label>Order Status</mat-label>
-<mat-select>
-  <mat-option *ngFor="let skill of orderStatus" [value]="skill.value">
+<mat-select (selectionChange)="orderStatusOnChanged($event.value)">
+  <mat-option *ngFor="let skill of orderStatus" [value]="skill.value" >
     {{skill.viewValue}}
   </mat-option>
 </mat-select>
@@ -17,7 +17,7 @@
 
 
 
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8" style="padding-left: 10px;padding-right: 10px;padding-top: 10px;">
 <table mat-table [dataSource]="Order_LIST">
 
   <!-- Position Column -->
@@ -72,7 +72,7 @@
         <button *ngIf="element.oPayment!='Done'" mat-button matTooltip="Make Payment" (click)="makePaymentDialog(element)" class="iconbutton" color="primary">
            Make Payment
           </button>
-        <button mat-button matTooltip="Click to return stock" class="iconbutton" color="warn">
+        <button mat-button matTooltip="Click to return stock" class="iconbutton" color="warn" (click)="returnStocks(element)">
            Return Stock
           </button>
           <button mat-button matTooltip="Click to report issue" (click)="reportQualityIssue(element)" class="iconbutton" color="accent">

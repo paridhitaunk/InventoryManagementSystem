@@ -6,11 +6,11 @@ import { InventoryServicesService } from 'src/app/Services/inventory-services.se
 import { NotificationService } from 'src/app/SharedService/notification.service';
 
 @Component({
-  selector: 'app-report-quality',
-  templateUrl: './report-quality.component.html',
-  styleUrls: ['./report-quality.component.css']
+  selector: 'app-return-stock',
+  templateUrl: './return-stock.component.html',
+  styleUrls: ['./return-stock.component.css']
 })
-export class ReportQualityComponent {
+export class ReturnStockComponent {
   constructor(private notifySer:NotificationService,private DialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public editData:any,private fb:FormBuilder,private inventorySer:InventoryServicesService){}
   orderDetailsform!:FormGroup;
 
@@ -39,10 +39,11 @@ export class ReportQualityComponent {
       this.orderDetailsform.controls['reportIssue'].setValue(this.editData.reportIssue);
       //console.log(this.editData.id);
   }
-  raiseIssueReport(){
+  returnStock(){
+    this.orderDetailsform.controls['oStatus'].setValue('Returned');
     this.inventorySer.updateOrderDetails(this.orderDetailsform.controls['id'].value,this.orderDetailsform.value).subscribe({
       next:(res)=>{
-        this.notifySer.showSuccess('Issue raised successfully','');
+        this.notifySer.showSuccess('Stock returned successfully','');
         this.DialogRef.close('save');
         this.orderDetailsform.reset();
         setTimeout(()=>{
