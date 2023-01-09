@@ -1,8 +1,23 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 
+export function passwordMatchValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const password = control.get('password')?.value;
+    const confirmPassword = control.get('confirmPassword')?.value;
+
+    if(password && confirmPassword && password !== confirmPassword) 
+    {
+      return {
+        passwordsDontMatch:true
+    }
+  }
+  return null;
+};
+}
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -10,44 +25,39 @@ import { InventoryServicesService } from 'src/app/Services/inventory-services.se
 })
 export class SignUpComponent {
 
-  constructor(private fb:FormBuilder,private rs:InventoryServicesService ,private _Router:Router) { }
+  constructor(private fb:FormBuilder,private rs:InventoryServicesService ,private _Router:Router, private authService:AuthenticationService, private router:Router) { }
 
-  
-  registerform!:FormGroup;
+  signUpForm = new FormGroup({
+    name: new FormControl(' ', [Validators.required]),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    password: new FormControl('',Validators.required),
+    confirmPassword: new FormControl('', Validators.required),
+  },{ validators: passwordMatchValidator() }) //cross field validator
 
-  emailpattern!:"^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-  namepattern!:"^[a-zA-Z ]{6,32}$";
-  passwordpattern!:"^[a-zA-Z0-9]{6,12}$";
-  mobilepattern!:"^[0-9]{10,10}$"
-
-  ngOnInit(): void {
-    this.registerform=this.fb.group({
-      name: new FormControl('', [Validators.required,Validators.pattern(this.namepattern)]),
-      email: new FormControl('', [Validators.required, Validators.pattern(this.emailpattern)]),
-      password:new FormControl('',[Validators.required,Validators.pattern(this.passwordpattern)]),
-      role:new FormControl('',[Validators.required]),
-      mobile:new FormControl('',[Validators.required,Validators.pattern(this.mobilepattern)]),
-      });
-   
+  get name() {
+    return this.signUpForm.get('name');
   }
-  public errorFunc = (controlName: string, errorName: string) =>{
-    return this.registerform.controls[controlName].hasError(errorName);
-    }
-    
-    registerFunc(){
-    if(this.registerform.valid)
-    {
-      console.log("RequiredDataisValid");
-    this.rs.Save(this.registerform.value).subscribe();
-    alert('you are successfully Register');
-    this._Router.navigate(['sign-in']);
-   
-    }
-    else
-    {
-      console.log("DataisNotValid");
-    }
+
+  get email() {
+    return this.signUpForm.get('email');
   }
-  
+
+  get password() {
+    return this.signUpForm.get('password');
+  }
+
+  get confirmPassword() {
+    return this.signUpForm.get('confirmPassword');
+  }
+
+
+  submit()
+  {
+    if(!this.signUpForm.valid) return;
+
+    const {name, email, password} = this.signUpForm.value;
+    this.authService.signup(name,email,password).subscribe(()=>
+    this.router.navigate(['/login']));
+  }
+
 }
-

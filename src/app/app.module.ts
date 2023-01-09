@@ -88,7 +88,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 
 import {MatTreeModule} from '@angular/material/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AddProductComponent } from './Product/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
@@ -97,7 +96,7 @@ import { EditSupplierComponent } from './Supplier/edit-supplier/edit-supplier.co
 import { ReceivePaymentComponent } from './Supplier/receive-payment/receive-payment.component';
 import { SupplyStockComponent } from './Supplier/supply-stock/supply-stock.component';
 
-
+import { AddProductComponent } from './Product/add-product/add-product.component';
 
 import { ProductComponent } from './Product/product/product.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
@@ -108,6 +107,9 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
@@ -225,7 +227,9 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
     ScrollingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
 
   ],
   providers: [],

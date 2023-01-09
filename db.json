@@ -48,20 +48,6 @@
       "sPhoneNumber": "5678945678",
       "sAddress": "Nagpur",
       "id": 33
-    },
-    {
-      "sId": "76",
-      "sName": "Deepa ",
-      "sPhoneNumber": "1234567890",
-      "sAddress": "Jaipur",
-      "id": 34
-    },
-    {
-      "sId": "89",
-      "sName": "Nammu",
-      "sPhoneNumber": "9866580990",
-      "sAddress": "Goa",
-      "id": 128
     }
   ],
   "User": [
