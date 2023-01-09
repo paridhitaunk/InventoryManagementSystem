@@ -1,5 +1,5 @@
   .example-container {
-    height: 600px;
+    height: 350px;
     overflow: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
@@ -8,6 +8,8 @@
     border: 1px solid rebeccapurple;
     padding: 10px;
     box-shadow: 5px 12px rgb(79, 39, 99);
+    background: rgb(220, 214, 241); 
+
   }
 
   table {

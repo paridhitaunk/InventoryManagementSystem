@@ -3,7 +3,7 @@
     <mat-nav-list (click)="sidenav.close()">
 
       <br>
-      <a mat-raised-button color="accent" class="menu" >
+      <a mat-raised-button color="accent" class="menu" routerLink="/adminDashboard"  >
         <mat-icon>apps</mat-icon>
         <mat-label>Dashboard</mat-label>
       </a>
@@ -33,7 +33,7 @@
   </mat-sidenav>
 
   <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="sidenav.open()" routerLink="/adminDashboard">
+    <button mat-icon-button (click)="sidenav.open()" >
       <mat-icon style="color: rgb(236, 225, 105);">apps</mat-icon>
       <button mat-stroked-button color="accent" style="margin-top:-8px ;font-size:small;">Dashboard</button>
     </button>

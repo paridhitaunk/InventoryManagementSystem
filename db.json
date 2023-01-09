@@ -1,20 +1,6 @@
 {
   "Supplier": [
     {
-      "sId": "45",
-      "sName": "Harsha",
-      "sPhoneNumber": "9876542357",
-      "sAddress": "Bombay",
-      "id": 125
-    },
-    {
-      "sId": "23",
-      "sName": "Adi",
-      "sPhoneNumber": "8765432121",
-      "sAddress": "Goa",
-      "id": 127
-    },
-    {
       "sId": "34",
       "sName": "Madhav",
       "sPhoneNumber": "8973999939",
@@ -27,13 +13,6 @@
       "sPhoneNumber": "9800098000",
       "sAddress": "Vidisha",
       "id": 30
-    },
-    {
-      "sId": "28",
-      "sName": "Piyush ",
-      "sPhoneNumber": "8769087690",
-      "sAddress": "Goa",
-      "id": 31
     },
     {
       "sId": "56",
@@ -50,18 +29,25 @@
       "id": 33
     },
     {
-      "sId": "76",
-      "sName": "Deepa ",
-      "sPhoneNumber": "1234567890",
-      "sAddress": "Jaipur",
-      "id": 34
-    },
-    {
       "sId": "89",
       "sName": "Nammu",
       "sPhoneNumber": "9866580990",
       "sAddress": "Goa",
       "id": 128
+    },
+    {
+      "sId": "76",
+      "sName": "Harsha",
+      "sPhoneNumber": "9876893300",
+      "sAddress": "Bhopal",
+      "id": 129
+    },
+    {
+      "sId": "23",
+      "sName": "Paridhi",
+      "sPhoneNumber": "8700078000",
+      "sAddress": "Indore",
+      "id": 130
     }
   ],
   "User": [
@@ -73,20 +59,20 @@
   ],
   "Product": [
     {
-      "pName": "Laptop",
-      "pPrice": "45000",
-      "pMfgDate": "2022-12-31T18:30:00.000Z",
-      "pExpiryDate": "2029-10-15T18:30:00.000Z",
-      "pAvailabiltyCount": 223,
-      "id": 101
+      "id": "101",
+      "pName": "Ghee",
+      "pPrice": "899",
+      "pMfgDate": "2023-01-01T18:30:00.000Z",
+      "pExpiryDate": "2034-11-28T18:30:00.000Z",
+      "pAvailabiltyCount": 12
     },
     {
-      "pName": "HeadPhones",
-      "pPrice": "1300",
-      "pMfgDate": "2023-01-09T18:30:00.000Z",
-      "pExpiryDate": "2023-01-23T18:30:00.000Z",
-      "pAvailabiltyCount": 20,
-      "id": 102
+      "id": "103",
+      "pName": "Juice",
+      "pPrice": "290",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2023-03-14T18:30:00.000Z",
+      "pAvailabiltyCount": 10
     }
   ],
   "OrderDetails": [
@@ -128,6 +114,16 @@
       "oPayment": "Processing",
       "oDate": "2022-12-31T18:30:00.000Z",
       "oStatus": "Delivered"
+    },
+    {
+      "id": "E26",
+      "pId": "34",
+      "oNoOfProducts": "5",
+      "oAmount": "2500",
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-31T18:30:00.000Z",
+      "oStatus": "Pending"
     }
   ]
 }

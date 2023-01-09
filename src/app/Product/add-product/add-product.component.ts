@@ -64,6 +64,8 @@ onSubmit(){
   })
   this.ProductForm.reset();
   this.DialogRef.close('save');
+  window.location.reload();
+
 }
 else{
   this.service.UpdateProduct(this.ProductForm.value).subscribe();
@@ -71,6 +73,8 @@ else{
     console.log(this.ProductForm.value.id);
     console.log(this.ProductForm.value)
   this.DialogRef.close('edit');
+  window.location.reload();
+
 }
 }
 

@@ -108,6 +108,7 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
+import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
 
 
 
@@ -130,7 +131,8 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
     SignInComponent,
     SignUpComponent,
     OrderDetailsComponent,
-    OrderlistComponent
+    OrderlistComponent,
+    SupplierLoginComponent
 
   ],
   imports: [
