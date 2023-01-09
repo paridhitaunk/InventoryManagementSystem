@@ -27,29 +27,8 @@
       "sPhoneNumber": "5678945678",
       "sAddress": "Nagpur",
       "id": 33
-    },
-    {
-      "sId": "89",
-      "sName": "Nammu",
-      "sPhoneNumber": "9866580990",
-      "sAddress": "Goa",
-      "id": 128
-    },
-    {
-      "sId": "76",
-      "sName": "Harsha",
-      "sPhoneNumber": "9876893300",
-      "sAddress": "Bhopal",
-      "id": 129
-    },
-    {
-      "sId": "23",
-      "sName": "Paridhi",
-      "sPhoneNumber": "8700078000",
-      "sAddress": "Indore",
-      "id": 130
     }
-  ],
+],
   "User": [
     {
       "id": 1,

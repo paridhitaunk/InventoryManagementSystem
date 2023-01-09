@@ -67,7 +67,6 @@ export class EditSupplierComponent {
 
     else {
       this.service.EditSupplier(this.SupplierForm.value).subscribe();
-      console.log(this.id);
       console.log(this.SupplierForm.value)
       this.DialogRef.close('edit');
       alert("Supplier Edited Successfully")

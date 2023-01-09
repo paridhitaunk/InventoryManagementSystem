@@ -15,3 +15,11 @@
       align-content: center;
       width: 100%;
     }
+
+    .header{
+      font-weight: bold;
+      font-size: larger;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(33, 24, 76);
+    }
+  

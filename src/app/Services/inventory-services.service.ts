@@ -107,25 +107,31 @@ export class InventoryServicesService {
 
 
 
-  
+ 
   saveorderDetails(obj:any){
     console.log("save");
     return this.http.post<any>(this.baseUrl+"/OrderDetails",obj);
   }
   
-
   orderGetData(): Observable<any> 
   {
     return this.http.get<any>(`${this.baseUrl}/OrderDetails`)
   }
- 
+  
+  updatePaymentStatus(id:string,data:any):Observable<any>{
+      return this.http.put<any>(this.baseUrl+"/OrderDetails/"+id,data);
+  }
+  raiseIssueReport(id:string,data:any):Observable<any>{
+    return this.http.put<any>(this.baseUrl+"/OrderDetails/"+id,data);
+  }
+  // orderGetData():Observable<any[]>
+  // {
+  //    return this.http.get<any[]>(this.baseUrl+"/OrderDetails");
+  // }
 
  deleteorderData(orderId:number)
  {
      return this.http.delete(this.baseUrl+"/deletedata/"+ orderId);
  }
- 
-
- 
 
 }
