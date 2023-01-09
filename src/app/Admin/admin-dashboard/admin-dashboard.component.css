@@ -1,17 +1,14 @@
-.example-ripple-container {
-    
-   
-  
-    width: 200px;
-    height: 200px;
-    
-  
-    
-  }
-  .example-container {
-    padding: 1px;
-    margin-top: 8px;
-    text-align: center;
-    height: auto;
-    display: flex;
-  }
+mat-grid-tile {
+  background: rgb(175, 145, 204);
+}
+
+.div{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(12, 12, 44);
+}
+
+.grid{
+  margin-top: 2px;
+}

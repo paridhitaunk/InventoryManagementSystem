@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { DialogRef } from '@angular/cdk/dialog';
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
