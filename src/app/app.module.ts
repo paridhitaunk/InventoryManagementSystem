@@ -107,12 +107,12 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
-
+import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -134,7 +134,9 @@ import { ReturnStockComponent } from './Admin/return-stock/return-stock.componen
     SignUpComponent,
     OrderDetailsComponent,
     OrderlistComponent,
+    SupplierLoginComponent,
     ReturnStockComponent
+
 
   ],
   imports: [
@@ -231,7 +233,8 @@ import { ReturnStockComponent } from './Admin/return-stock/return-stock.componen
     ReactiveFormsModule,
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
 
   ],
   providers: [],

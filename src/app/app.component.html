@@ -4,7 +4,7 @@
     <mat-nav-list (click)="sidenav.close()">
 
       <br>
-      <a mat-raised-button color="accent" class="menu" >
+      <a mat-raised-button color="accent" class="menu" routerLink="/adminDashboard"  >
         <mat-icon>apps</mat-icon>
         <mat-label>Dashboard</mat-label>
       </a>
@@ -34,7 +34,7 @@
   </mat-sidenav>
 
   <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="sidenav.open()" routerLink="/adminDashboard">
+    <button mat-icon-button (click)="sidenav.open()" >
       <mat-icon style="color: rgb(236, 225, 105);">apps</mat-icon>
       <button mat-stroked-button color="accent" style="margin-top:-8px ;font-size:small;">Dashboard</button>
     </button>
@@ -52,9 +52,9 @@
    <!-- <app-product></app-product> -->
    <!-- <app-orderlist></app-orderlist>  -->
   <!-- <app-add-product></app-add-product> -->
-  
+  <!-- <app-supplier-login></app-supplier-login> -->
    <!-- <app-add-product></app-add-product> -->
-   <mat-toolbar color="primary">
+   <!-- <mat-toolbar color="primary">
     Sign-Up with firebase
     <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
     <button mat-button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
@@ -63,7 +63,7 @@
   <ng-template #loginButton>
     <button mat-button routerLink="login"><mat-icon>login</mat-icon>Login</button>
   </ng-template>
-   </mat-toolbar>
+   </mat-toolbar> -->
 <div class="content">
 
   <router-outlet></router-outlet>

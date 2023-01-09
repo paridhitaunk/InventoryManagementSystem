@@ -11,7 +11,7 @@ import { AddProductComponent } from '../add-product/add-product.component';
 })
 export class ProductComponent implements OnInit{
   Product_LIST: product[];
-  displayedColumns = ['pId','pName','pPrice','pMfgDate','pExpiryDate','pAvailabiltyCount','Action'];
+  displayedColumns = ['pId','pName','pPrice','pMfgDate','pExpiryDate','pAvailabiltyCount','Edit','Delete'];
   ngOnInit():void
   {
    this.service.GetProduct().subscribe((data:product[]) => {
@@ -40,7 +40,8 @@ export class ProductComponent implements OnInit{
 
   Delete(id:number)
   {
-    this.service.DeleteProduct(id).subscribe()
+    this.service.DeleteProduct(id).subscribe();
+    window.location.reload();
   }
 
 }

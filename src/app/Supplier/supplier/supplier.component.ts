@@ -55,6 +55,8 @@ export class SupplierComponent implements OnInit {
   DeleteSupplier(id:number)
   {
     this.service.DeleteSupplier(id).subscribe()
+    alert("Supplier Deleted Successfully!");
     window.location.reload();
+
   }
 }
