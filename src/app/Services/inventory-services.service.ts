@@ -118,10 +118,7 @@ export class InventoryServicesService {
     return this.http.get<any>(`${this.baseUrl}/OrderDetails`)
   }
   
-  updatePaymentStatus(id:string,data:any):Observable<any>{
-      return this.http.put<any>(this.baseUrl+"/OrderDetails/"+id,data);
-  }
-  raiseIssueReport(id:string,data:any):Observable<any>{
+  updateOrderDetails(id:string,data:any):Observable<any>{
     return this.http.put<any>(this.baseUrl+"/OrderDetails/"+id,data);
   }
   // orderGetData():Observable<any[]>

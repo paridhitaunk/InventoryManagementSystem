@@ -4,6 +4,7 @@ import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './Admin/admin/admin.component';
+import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 const routes: Routes = [
   {
     path:"",
@@ -14,7 +15,11 @@ const routes: Routes = [
     component:AdminComponent
   }, 
   {path:"supplier",component:SupplierComponent},
-  {path:"addSupplier",component:AddSupplierComponent}
+  {path:"addSupplier",component:AddSupplierComponent},
+  {
+    path:'addOrder',
+    component:OrderDetailsComponent
+  }
 ];
 
 @NgModule({
