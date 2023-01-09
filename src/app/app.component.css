@@ -12,7 +12,7 @@
 .toolbar{
     background-color: rgb(43, 13, 70);
     height: 70px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .content

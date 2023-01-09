@@ -110,6 +110,7 @@ import { OrderlistComponent } from './Order/order-list/order-list.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
 
 
@@ -132,7 +133,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     SignInComponent,
     SignUpComponent,
     OrderDetailsComponent,
-    OrderlistComponent
+    OrderlistComponent,
+    ReturnStockComponent
 
   ],
   imports: [
