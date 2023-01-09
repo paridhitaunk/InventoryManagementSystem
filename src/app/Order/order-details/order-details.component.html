@@ -1,16 +1,55 @@
-<h1 style="font-weight: bolder; color:indigo; text-align:center" >PURCHASE ORDER <i class="fa fa-first-order" aria-hidden="true"></i></h1>
-<div style="display:flex;width:100%">
-<div style="width:60%">
-  <div class="" style="height: auto;margin-left: 5px;">
-    <div class=""><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Order Details</h3></div>
-    
-    <form [formGroup]="orderDetailsform" (ngSubmit)="orderFunc()" novalidate>
-      <div class="card">
-      <mat-form-field  appearance="fill" class="custom-form-field">
-        <mat-label>OrderId</mat-label>
-        <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
-        <input matInput="" placeholder="Enter OrderId" formControlName="id" class="form-input-field" id="id" >
-        <mat-error *ngIf="errorFunc('id', 'required')">Name is required</mat-error>
+
+<br>
+<h1 style="font-weight: bold; color:indigo; text-align:center" >PURCHASE ORDER <i class="fa fa-first-order" aria-hidden="true"></i></h1>
+
+<div class="container">
+  <div class="head"><h4  >Order Details</h4></div>
+  
+  <form [formGroup]="orderDetailsform" (ngSubmit)="orderFunc()" novalidate>
+    <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+      <mat-label>OrderId</mat-label>
+      <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
+      <input matInput="" placeholder="Enter OrderId" formControlName="id" class="form-input-field" id="id" >
+      <mat-error *ngIf="errorFunc('id', 'required')">Name is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+      <mat-label>Product Id</mat-label>
+      <mat-icon class="material-icons" color="accent" matSuffix>account_box</mat-icon>
+      <input matInput="" placeholder="Enter ProductId" formControlName="pId" class="form-input-field" id="pId">
+      <mat-error *ngIf="errorFunc('pId', 'required')">ProductId is required</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="card">
+    <mat-form-field   appearance="fill" class="custom-form-field">
+        <mat-label>Quantity Ordered</mat-label>
+            <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
+            <input matInput="" placeholder="enter oNoOfProducts" formControlName="oNoOfProducts" class="form-input-field" id="oNoOfProducts">
+            <mat-error *ngIf="errorFunc('oNoOfProducts', 'required')">Quantity is required</mat-error>
+       </mat-form-field>   
+  </div>
+
+
+  
+  <div class="card">
+    <mat-form-field appearance="fill" class="custom-form-field">
+        <mat-label>OrderAmount</mat-label>
+            <mat-icon class="material-icons" color="accent" matSuffix>add_shopping_cart</mat-icon>
+            <input matInput="" placeholder="enter oAmount" formControlName="oAmount" class="form-input-field" id="oAmount">
+            <mat-error *ngIf="errorFunc('oAmount', 'required')">Amount is required</mat-error>
+            </mat-form-field>
+  </div>
+
+  <div class="card">
+    <mat-form-field  appearance="fill" class="custom-form-field">
+        <mat-label>Ordered Date</mat-label>
+        <input matInput [matDatepicker]="picker" color="accent" formControlName="oDate" id="oDate">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker textprimary></mat-datepicker>
+        <mat-error *ngIf="errorFunc('oDate', 'required')">oreder Date is required</mat-error>
       </mat-form-field>
     </div>
     <div class="card">
