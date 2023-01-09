@@ -10,4 +10,5 @@ export class Order
   oPaymentType:string;
   oStatus:string;
   reportIssue:string;
+  supplier:string;
 }

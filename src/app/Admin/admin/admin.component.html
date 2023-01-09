@@ -1,7 +1,7 @@
 
 <div class="example-container"
 [class.mat-elevation-z2]="false"
-[class.mat-elevation-z8]="true">
+[class.mat-elevation-z2]="true">
 &nbsp;
 <mat-form-field class="formfield" appearance="outline">
 <mat-label>Order Status</mat-label>
@@ -18,7 +18,7 @@
 
 
 <div class="mat-elevation-z8" style="padding-left: 10px;padding-right: 10px;padding-top: 10px;">
-<table mat-table [dataSource]="Order_LIST">
+<table mat-table [dataSource]="dataSource">
 
   <!-- Position Column -->
   <ng-container matColumnDef="id">
@@ -34,7 +34,10 @@
     <th mat-header-cell *matHeaderCellDef> ProductName </th>
     <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
   </ng-container>
-
+  <ng-container matColumnDef="supplier">
+    <th mat-header-cell *matHeaderCellDef> Supplier </th>
+    <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+  </ng-container>
   <!-- Weight Column -->
   <ng-container matColumnDef="oNoOfProducts">
     <th mat-header-cell *matHeaderCellDef> No of Product </th>

@@ -37,6 +37,7 @@ export class ReportQualityComponent {
       this.orderDetailsform.controls['oDate'].setValue(this.editData.oDate);
       this.orderDetailsform.controls['oStatus'].setValue(this.editData.oStatus);
       this.orderDetailsform.controls['reportIssue'].setValue(this.editData.reportIssue);
+      this.orderDetailsform.controls['supplier'].setValue(this.editData.supplier);
       //console.log(this.editData.id);
   }
   raiseIssueReport(){

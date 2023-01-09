@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MakePaymentComponent } from '../make-payment/make-payment.component';
 import { ReportQualityComponent } from '../report-quality/report-quality.component';
 import { Order } from 'src/app/Models/orders';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { ReturnStockComponent } from '../return-stock/return-stock.component';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 interface IOrderStatus {
   value: string;
@@ -18,7 +20,9 @@ interface IOrderStatus {
 export class AdminComponent {
   constructor(public dialog: MatDialog,private service:InventoryServicesService){}
   Order_LIST: Order[];
-  displayedColumns = ['id','pId','productName','oNoOfProducts','oAmount','oDate','oPayment','oPaymentType','oStatus','reportIssue','action'];
+  dataSource = new MatTableDataSource<Order>([]);
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  displayedColumns = ['id','pId','productName','supplier','oNoOfProducts','oAmount','oDate','oPayment','oPaymentType','oStatus','reportIssue','action'];
   orderStatus: IOrderStatus[] = [
     {value: '1', viewValue: 'Delivered'},
     {value: '2', viewValue: 'Pending'},
@@ -29,6 +33,8 @@ export class AdminComponent {
   {
    this.service.orderGetData().subscribe((data:Order[]) => {
      this.Order_LIST = data;
+     this.dataSource.paginator = this.paginator;
+     this.dataSource.data=this.Order_LIST;
      console.log(data);
    })
   }
@@ -36,7 +42,7 @@ export class AdminComponent {
     this.Order_LIST=[];
     this.service.orderGetData().subscribe((data:Order[]) => {
       this.Order_LIST=data.filter(x=>x.oStatus==this.orderStatus.find(x=>x.value==orderStatusValue)?.viewValue)
-     //console.log(orderStatusValue);
+     this.dataSource.data=this.Order_LIST;
     })
   }
 
