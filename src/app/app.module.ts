@@ -113,6 +113,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment.prod';
+import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
 @NgModule({
   declarations: [
