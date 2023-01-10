@@ -22,6 +22,7 @@ import { MakePaymentComponent } from './Admin/make-payment/make-payment.componen
 import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
 
 const routes: Routes = [
+  {path:"signIn",component:SignInComponent},
   {path: '', pathMatch:'full', component:SignInComponent},
   {path:"signUp",component:SignUpComponent},
   {path:"admin",component:AdminComponent},

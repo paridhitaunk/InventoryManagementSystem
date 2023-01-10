@@ -28,7 +28,7 @@
       "sAddress": "Nagpur",
       "id": 33
     }
-],
+  ],
   "User": [
     {
       "id": 1,
@@ -103,6 +103,45 @@
       "oPayment": "Done",
       "oDate": "2023-01-31T18:30:00.000Z",
       "oStatus": "Pending"
+    },
+    {
+      "id": "TAqp9om",
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "10",
+      "oAmount": 8990,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Madhav"
+    },
+    {
+      "id": "GSDgpjG",
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "10",
+      "oAmount": 8990,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Madhav"
+    },
+    {
+      "id": "8fBmivs",
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "10",
+      "oAmount": 2900,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Madhav"
     }
   ]
 }

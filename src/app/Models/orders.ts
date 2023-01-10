@@ -1,6 +1,5 @@
 export class Order
 {
-
   id:number;
   pId:string;
   productName:string;
@@ -11,4 +10,5 @@ export class Order
   oPaymentType:string;
   oStatus:string;
   reportIssue:string;
+  supplier:string;
 }

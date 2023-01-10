@@ -107,9 +107,6 @@ import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderlistComponent } from './Order/order-list/order-list.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
 import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
@@ -137,7 +134,9 @@ import { environment } from 'src/environments/environment.prod';
     SignInComponent,
     SignUpComponent,
     OrderDetailsComponent,
-    OrderlistComponent
+    OrderlistComponent,
+    ReturnStockComponent,
+    SupplierLoginComponent
 
 
   ],
