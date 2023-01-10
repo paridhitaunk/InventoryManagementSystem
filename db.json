@@ -28,7 +28,7 @@
       "sAddress": "Nagpur",
       "id": 33
     }
-],
+  ],
   "User": [
     {
       "id": 1,
@@ -52,6 +52,22 @@
       "pMfgDate": "2022-12-31T18:30:00.000Z",
       "pExpiryDate": "2023-03-14T18:30:00.000Z",
       "pAvailabiltyCount": 10
+    },
+    {
+      "id": "112",
+      "pName": "Mustard Oil",
+      "pPrice": "300",
+      "pMfgDate": "2022-11-01T18:30:00.000Z",
+      "pExpiryDate": "2023-11-12T18:30:00.000Z",
+      "pAvailabiltyCount": 90
+    },
+    {
+      "id": "111",
+      "pName": "Surf Excel",
+      "pPrice": "299",
+      "pMfgDate": "2022-01-02T18:30:00.000Z",
+      "pExpiryDate": "2024-06-09T18:30:00.000Z",
+      "pAvailabiltyCount": 87
     }
   ],
   "OrderDetails": [
@@ -72,7 +88,7 @@
       "oPaymentType": "CashOnDeleviery",
       "oPayment": "Pending",
       "oDate": "2023-01-03T18:30:00.000Z",
-      "oStatus": "Pending"
+      "oStatus": "Canceled"
     },
     {
       "id": "A34",
@@ -103,6 +119,83 @@
       "oPayment": "Done",
       "oDate": "2023-01-31T18:30:00.000Z",
       "oStatus": "Pending"
+    },
+    {
+      "id": "pqSk3Xy",
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "2",
+      "oAmount": 580,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-02T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Naina"
+    },
+    {
+      "id": "IlZG1fI",
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "5",
+      "oAmount": 1450,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Pending",
+      "oDate": "2022-06-10T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Naina"
+    },
+    {
+      "id": "BYlFz-U",
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "2",
+      "oAmount": 580,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-02T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Naina"
+    },
+    {
+      "id": "81azN1R",
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "24",
+      "oAmount": 21576,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-31T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Nammu"
+    },
+    {
+      "id": "BxqtG8e",
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "2",
+      "oAmount": 1798,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-09T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Nammu"
+    },
+    {
+      "id": "GmEPeW4",
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "2",
+      "oAmount": 580,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-09T18:30:00.000Z",
+      "oStatus": "Returned",
+      "reportIssue": "Expired"
     }
   ]
 }

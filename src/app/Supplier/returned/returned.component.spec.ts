@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SupplyStockComponent } from './supply-stock.component';
+import { ReturnedComponent } from './returned.component';
 
-describe('SupplyStockComponent', () => {
-  let component: SupplyStockComponent;
-  let fixture: ComponentFixture<SupplyStockComponent>;
+describe('ReturnedComponent', () => {
+  let component: ReturnedComponent;
+  let fixture: ComponentFixture<ReturnedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SupplyStockComponent ]
+      declarations: [ ReturnedComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SupplyStockComponent);
+    fixture = TestBed.createComponent(ReturnedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import { SupplierForm } from 'src/app/Models/Supplier';
+import { Order } from '../Models/orders';
 
 @Injectable({
   providedIn: 'root'
@@ -117,7 +118,9 @@ export class InventoryServicesService {
   {
     return this.http.get<any>(`${this.baseUrl}/OrderDetails`)
   }
-  
+  saveOrdersDetails(data:any):Observable<Order>{
+    return this.http.post<Order>(this.baseUrl+"/OrderDetails",data);
+  }
   updateOrderDetails(id:string,data:any):Observable<any>{
     return this.http.put<any>(this.baseUrl+"/OrderDetails/"+id,data);
   }
@@ -131,6 +134,4 @@ export class InventoryServicesService {
      return this.http.delete(this.baseUrl+"/deletedata/"+ orderId);
  }
  
-
-
 }

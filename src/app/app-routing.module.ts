@@ -4,7 +4,6 @@ import { SupplierComponent } from './Supplier/supplier/supplier.component';
 import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.component';
 
 import { ReceivePaymentComponent } from './Supplier/receive-payment/receive-payment.component';
-import { SupplyStockComponent } from './Supplier/supply-stock/supply-stock.component';
 
 import { ProductComponent } from './Product/product/product.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
@@ -20,22 +19,36 @@ import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard
 
 import { MakePaymentComponent } from './Admin/make-payment/make-payment.component';
 import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
+import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
+import { TrackOrderComponent } from './Supplier/track-order/track-order.component';
+import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
+import { DeliveredComponent } from './Supplier/delivered/delivered.component';
+import { PendingComponent } from './Supplier/pending/pending.component';
+import { ReturnedComponent } from './Supplier/returned/returned.component';
 
 const routes: Routes = [
   {path: '', pathMatch:'full', component:SignInComponent},
   {path:"signUp",component:SignUpComponent},
-  {path:"admin",component:AdminComponent},
+  {path:"orderList",component:AdminComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},
   {path:"makePayment",component:MakePaymentComponent},
   {path:"reportQuality",component:ReportQualityComponent},
+  
   {path:"supplier",component:SupplierComponent},
   {path:"addSupplier",component:AddSupplierComponent},
   {path:"receivePayment",component:ReceivePaymentComponent},
-  {path:"supplyStock",component:SupplyStockComponent},
+  {path:"trackOrder",component:TrackOrderComponent},
+  {path:"deliveredOrder",component:DeliveredComponent},
+  {path:"pendingOrder",component:PendingComponent},
+  {path:"returnedOrder",component:ReturnedComponent},
+  {path:"cancelledOrder",component:CancelledComponent},
+
   {path:"product",component:ProductComponent},
   {path:"addProduct",component:AddProductComponent},
   {path:"orderDetails",component:OrderDetailsComponent},
-  {path:"orderList",component:OrderlistComponent}
+  // {path:"orderList",component:OrderlistComponent},
+  
+  {path:"supplierLogin",component:SupplierLoginComponent}
 
 ];
 
