@@ -52,3 +52,16 @@ export class SignUpComponent {
 }
 
 
+<<<<<<< Updated upstream
+=======
+  submit()
+  {
+    if(!this.signUpForm.valid) return;
+
+    const {name, email, password} = this.signUpForm.value;
+    this.authService.signup(name,email,password).subscribe(()=>
+    this.router.navigate(['/signIn']));
+  }
+
+}
+>>>>>>> Stashed changes

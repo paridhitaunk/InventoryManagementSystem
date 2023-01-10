@@ -20,6 +20,7 @@ export class SignInComponent {
   passwordpattern!:"^[a-zA-Z0-9]{6,12}$";
   mobilepattern!:"^[0-9]{10,10}$"
 
+<<<<<<< Updated upstream
   ngOnInit(): void {
     this.loginform=this.fb.group({
       email: new FormControl('', [Validators.required, Validators.pattern(this.emailpattern)]),
@@ -59,6 +60,32 @@ export class SignInComponent {
   
   }
   
+=======
+    if (!this.loginForm.valid || !email || !password) {
+      
+      return;
+    }
+    else if (email== "admin@gmail.com")
+    {
+      this.authService
+      .login(email, password)
+      .subscribe(() => {
+        this.router.navigate(['/adminDashboard']);
+      });
+    }
+    else
+    {
+      this.authService
+      .login(email, password)
+      .subscribe(() => {
+        this.router.navigate(['/signup']);
+      });
+    }
+    
+  }
+}
+
+>>>>>>> Stashed changes
   
 
 

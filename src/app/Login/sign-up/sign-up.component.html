@@ -35,6 +35,7 @@
             Only alphabetes and numbers are allowed
             </mat-error>      
     </mat-form-field>
+<<<<<<< Updated upstream
   </div>
   
     <div class="card">
@@ -47,6 +48,13 @@
               Please Enter 10 digit Mobile No.
               </mat-error>      
       </mat-form-field>
+=======
+    <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+      Passwords should match
+  </mat-error>
+    <div class="center margin-top">
+      <button type="submit" mat-raised-button color="primary" >Sign Up!</button>
+>>>>>>> Stashed changes
     </div>
 
     <div class="card">
