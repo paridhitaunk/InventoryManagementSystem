@@ -134,7 +134,9 @@ import { environment } from 'src/environments/environment.prod';
     SignUpComponent,
     OrderDetailsComponent,
     OrderlistComponent,
-    SupplierLoginComponent
+    SupplierLoginComponent,
+    ReturnStockComponent
+
 
   ],
   imports: [

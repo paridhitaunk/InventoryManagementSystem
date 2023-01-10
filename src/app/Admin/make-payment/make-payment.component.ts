@@ -41,7 +41,7 @@ export class MakePaymentComponent {
   }
   makePayment(){
     this.orderDetailsform.controls['oPayment'].setValue('Done');
-    this.inventorySer.updatePaymentStatus(this.orderDetailsform.controls['id'].value,this.orderDetailsform.value).subscribe({
+    this.inventorySer.updateOrderDetails(this.orderDetailsform.controls['id'].value,this.orderDetailsform.value).subscribe({
       next:(res)=>{
       this.notifySer.showSuccess('Payment paid successfully','');
       this.DialogRef.close('save');
@@ -51,7 +51,7 @@ export class MakePaymentComponent {
       },4000)
       },
       error:(error)=>{
-        alert(error);
+        this.notifySer.showError(error,'');
       }
     });
   }
