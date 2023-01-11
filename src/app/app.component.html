@@ -71,7 +71,7 @@
   </ng-template>
    </mat-toolbar> -->
 
-   </mat-toolbar> -->
+   <!-- </mat-toolbar> --> -->
 
 
 
@@ -182,11 +182,7 @@
         <button mat-stroked-button style="margin-top: -8px; font-size: small">
           Dashboard
         </button>
-  
-  
-      </button>
-  
-  
+
       <ng-container *ngIf="authService.currentUser$ | async as user">
         <button mat-button style="margin-left: 980px;" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
       </ng-container>
