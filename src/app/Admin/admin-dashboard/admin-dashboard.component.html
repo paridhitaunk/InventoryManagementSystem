@@ -1,18 +1,29 @@
 <mat-grid-list cols="2" rowHeight="4:2" class="grid">
   <div class="div">
-    <mat-grid-tile>Total Products</mat-grid-tile>
+    <mat-grid-tile>Total Products:  
+      <br>
+      <span>{{productCount}}</span>
+    </mat-grid-tile>
   </div>
 
   <div class="div">
-    <mat-grid-tile>Order Updates</mat-grid-tile>
+    <mat-grid-tile>Order Updates:
+      <br>
+      <span>{{totalOrderCount}}</span>
+    </mat-grid-tile>
 
   </div>
 
   <div class="div">
-    <mat-grid-tile>Low Stocks</mat-grid-tile>
+    <mat-grid-tile>Supplier Count: 
+    <span>{{supplierCount}}</span>
+    </mat-grid-tile>
   </div>
 
   <div class="div">
-    <mat-grid-tile>Payment Status</mat-grid-tile>
+    <mat-grid-tile>Total Delivered: 
+      <span>{{deliveredOrderCount}}</span>
+    </mat-grid-tile>
   </div>
+
 </mat-grid-list>
