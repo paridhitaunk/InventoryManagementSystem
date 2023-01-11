@@ -32,11 +32,13 @@
     </mat-sidenav>
  
     <mat-toolbar color="primary" class="toolbar" *ngIf="authService.currentUser$ | async as user">
-      <button mat-icon-button class="Menu" (click)="sidenav.open()">
-        <mat-icon>apps</mat-icon>
-          <button mat-stroked-button style="margin-left: 3px; margin-top:-11px" class="Menu"> Menu </button>
-      </button>
-   
+      
+      <ng-container >
+        <button mat-button class="Menu" (click)="sidenav.open()">
+          <mat-icon>apps</mat-icon> Menu 
+        </button>
+      </ng-container>
+
       <ng-container *ngIf="authService.currentUser$ | async as user">
         <button mat-button class="logout-btn" (click)="logout()">
         <mat-icon>logout</mat-icon>Logout</button>

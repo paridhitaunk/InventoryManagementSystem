@@ -6,7 +6,9 @@
 
   background: rgb(233, 239, 239);
   padding: 48px;
-  border-radius: 16px
+  border-radius: 16px;
+  margin-left: 850px;
+  margin-top: 10px;
 }
 
 .form-container mat-form-field
@@ -35,4 +37,11 @@
   background-color: #008187;
   color: azure;
 
+}
+
+.bg-img{
+  margin-top: -515px;
+  margin-left: 5px;
+  width: 800px; 
+  border-radius: 30px;
 }
