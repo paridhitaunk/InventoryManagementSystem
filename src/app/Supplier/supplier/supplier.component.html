@@ -3,11 +3,11 @@
   <div matRipple>
     <ng-content></ng-content>
 
-    <h1 style="text-align: center;height: 60px;  color: rgb(60, 28, 102); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: xx-large;">
+    <h1 class="heading">
       <b>Suppliers List</b>
     </h1>
     <div>
-      <button style="margin-top: -20px; margin-left: 1050px; width: 130px;" mat-raised-button color="primary" (click)="openDialog()">Add Supplier</button>
+      <button mat-raised-button  class="addSupplier-Btn" (click)="openDialog()">Add Supplier</button>
     </div>
   </div>
 
@@ -39,24 +39,25 @@
         <td mat-cell *matCellDef="let element"> {{element.sAddress}} </td>
       </ng-container>
 
-      <!--Edit/Delete-->
+      <!--Edit/Delete-->     
       <ng-container matColumnDef="Edit">
-        <th mat-header-cell *matHeaderCellDef class="header"> Edit Details </th>
+        <th mat-header-cell *matHeaderCellDef class="header"> Update Details </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="accent" (click)="EditSupplier(element)">
+          <button mat-raised-button class="edit-Btn" (click)="EditSupplier(element)">
             &nbsp;&nbsp;<mat-icon>edit</mat-icon> Edit
           </button>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="Delete">
-        <th mat-header-cell *matHeaderCellDef class="header"> Delete Supplier </th>
+        <th mat-header-cell *matHeaderCellDef class="header"> Delete Item</th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="warn" (click)="DeleteSupplier(element.id)">
+          <button mat-raised-button class="delete-Btn" (click)="DeleteSupplier(element.id)">
             &nbsp;&nbsp;<mat-icon>delete</mat-icon>Delete
           </button>
         </td>
       </ng-container>
+     
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" ></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -28,7 +28,7 @@ mat-grid-tile {
   text-align: center;
   margin-top: -850px;
   margin-right: 15px;
-  margin-left: 230px;
+  margin-left: 210px;
   height: 60px;
   background-color: rgb(9, 26, 40);
   color: rgb(140, 188, 229);
@@ -56,7 +56,7 @@ mat-grid-tile {
   text-align: center;
   margin-top: -850px;
   margin-right: 15px;
-  margin-left: 780px;
+  margin-left: 750px;
   height: 60px;
   background-color: rgb(9, 26, 40);
   color: rgb(140, 188, 229);
@@ -84,7 +84,7 @@ mat-grid-tile {
   text-align: center;
   margin-top: -850px;
   margin-right: 15px;
-  margin-left: 240px;
+  margin-left: 210px;
   height: 60px;
   background-color: rgb(9, 26, 40);
   color: rgb(140, 188, 229);
@@ -94,7 +94,8 @@ mat-grid-tile {
 
 
 .supplierCount-header {
-  background-image: url('https://www.crunkthread.com/wp-content/uploads/2020/06/23741-home-delivery-man.gif');
+  background-image: url('https://cdn.create.vista.com/api/media/small/432754250/stock-photo-african-american-warehouse-worker-use');
+
   background-size: cover;
 } 
 
@@ -113,7 +114,7 @@ mat-grid-tile {
   text-align: center;
   margin-top: -850px;
   margin-right: 15px;
-  margin-left: 780px;
+  margin-left: 750px;
   height: 60px;
   background-color: rgb(9, 26, 40);
   color: rgb(140, 188, 229);
@@ -122,6 +123,6 @@ mat-grid-tile {
 }
 
 .totalDelivered-header {
-  background-image: url('https://www.crunkthread.com/wp-content/uploads/2020/06/23741-home-delivery-man.gif');
+  background-image: url('https://cdn.create.vista.com/api/media/small/502090610/stock-photo-unrecognizable-african-delivery-man-giving');
   background-size: cover;
 }
