@@ -4,10 +4,8 @@
   max-width: 300px;
   margin: auto;
 
-  /* background: rgb(220, 214, 241);  */
-  /* background: linear-gradient(-45deg, #b682e9,#430777);
-	background-size: 400% 400%;
-  animation: gradient 10s ease infinite; */
+
+  background: rgb(220, 214, 241);
   padding: 48px;
   border-radius: 16px;
 
@@ -28,6 +26,7 @@
 .form-container mat-form-field
 {
   width: 100%;
+
 }
 
 .center

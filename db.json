@@ -59,6 +59,22 @@
       "pMfgDate": "2022-12-31T18:30:00.000Z",
       "pExpiryDate": "2023-03-14T18:30:00.000Z",
       "pAvailabiltyCount": 10
+    },
+    {
+      "id": "112",
+      "pName": "Mustard Oil",
+      "pPrice": "300",
+      "pMfgDate": "2022-11-01T18:30:00.000Z",
+      "pExpiryDate": "2023-11-12T18:30:00.000Z",
+      "pAvailabiltyCount": 90
+    },
+    {
+      "id": "111",
+      "pName": "Surf Excel",
+      "pPrice": "299",
+      "pMfgDate": "2022-01-02T18:30:00.000Z",
+      "pExpiryDate": "2024-06-09T18:30:00.000Z",
+      "pAvailabiltyCount": 87
     }
   ],
   "OrderDetails": [
@@ -79,7 +95,7 @@
       "oPaymentType": "CashOnDeleviery",
       "oPayment": "Pending",
       "oDate": "2023-01-03T18:30:00.000Z",
-      "oStatus": "Pending"
+      "oStatus": "Canceled"
     },
     {
       "id": 103,
@@ -175,6 +191,7 @@
       "oStatus": "Pending",
       "reportIssue": "",
       "supplier": "Naina"
+
     }
   ]
 }

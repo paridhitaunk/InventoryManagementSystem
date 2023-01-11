@@ -94,7 +94,6 @@ import { AddSupplierComponent } from './Supplier/add-supplier/add-supplier.compo
 
 import { EditSupplierComponent } from './Supplier/edit-supplier/edit-supplier.component';
 import { ReceivePaymentComponent } from './Supplier/receive-payment/receive-payment.component';
-import { SupplyStockComponent } from './Supplier/supply-stock/supply-stock.component';
 
 import { AddProductComponent } from './Product/add-product/add-product.component';
 
@@ -114,6 +113,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment.prod';
+import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
+import { TrackOrderComponent } from './Supplier/track-order/track-order.component';
+import { DeliveredComponent } from './Supplier/delivered/delivered.component';
+import { PendingComponent } from './Supplier/pending/pending.component';
+import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
+import { ReturnedComponent } from './Supplier/returned/returned.component';
 
 @NgModule({
   declarations: [
@@ -124,7 +129,6 @@ import { environment } from 'src/environments/environment.prod';
 
     EditSupplierComponent,
     ReceivePaymentComponent,
-    SupplyStockComponent,
 
     ProductComponent,
     AdminDashboardComponent,
@@ -135,11 +139,12 @@ import { environment } from 'src/environments/environment.prod';
     SignUpComponent,
     OrderDetailsComponent,
     OrderlistComponent,
+
     ReturnStockComponent,
     SupplierLoginComponent
 
-
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
