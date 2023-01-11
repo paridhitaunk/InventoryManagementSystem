@@ -5,6 +5,7 @@
     font-size: larger;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: -20px;
     border: 1px solid rebeccapurple;
     padding: 10px;
     box-shadow: 5px 12px rgb(79, 39, 99);
@@ -13,6 +14,7 @@
   }
 
   table {
+    margin-top:20px;
     width: 100%;
   }
 

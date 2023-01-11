@@ -27,6 +27,7 @@ import { PendingComponent } from './Supplier/pending/pending.component';
 import { ReturnedComponent } from './Supplier/returned/returned.component';
 
 const routes: Routes = [
+  {path:"signIn",component:SignInComponent},
   {path: '', pathMatch:'full', component:SignInComponent},
   {path:"signUp",component:SignUpComponent},
   {path:"orderList",component:AdminComponent},

@@ -27,6 +27,13 @@
       "sPhoneNumber": "5678945678",
       "sAddress": "Nagpur",
       "id": 33
+    },
+    {
+      "sId": "12",
+      "sName": "paridhi",
+      "sPhoneNumber": "9521206684",
+      "sAddress": "Rajgarh",
+      "id": 34
     }
   ],
   "User": [
@@ -72,7 +79,7 @@
   ],
   "OrderDetails": [
     {
-      "id": "123",
+      "id": 101,
       "oNoOfProducts": "12",
       "oAmount": "212334",
       "oPaymentType": "CashOnDeleviery",
@@ -81,7 +88,7 @@
       "oStatus": "Delivered"
     },
     {
-      "id": "E234",
+      "id": 102,
       "pId": "111",
       "oNoOfProducts": "2",
       "oAmount": "900",
@@ -91,7 +98,7 @@
       "oStatus": "Canceled"
     },
     {
-      "id": "A34",
+      "id": 103,
       "pId": "3",
       "oNoOfProducts": "2",
       "oAmount": "450",
@@ -101,7 +108,7 @@
       "oStatus": "Pending"
     },
     {
-      "id": "S32",
+      "id": 104,
       "pId": "9",
       "oNoOfProducts": "3",
       "oAmount": "280",
@@ -111,7 +118,7 @@
       "oStatus": "Delivered"
     },
     {
-      "id": "E26",
+      "id": 105,
       "pId": "34",
       "oNoOfProducts": "5",
       "oAmount": "2500",
@@ -121,81 +128,70 @@
       "oStatus": "Pending"
     },
     {
-      "id": "pqSk3Xy",
-      "pId": "103",
-      "productName": "Juice",
-      "oNoOfProducts": "2",
-      "oAmount": 580,
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Done",
-      "oDate": "2023-01-02T18:30:00.000Z",
-      "oStatus": "Pending",
-      "reportIssue": "",
-      "supplier": "Naina"
-    },
-    {
-      "id": "IlZG1fI",
-      "pId": "103",
-      "productName": "Juice",
-      "oNoOfProducts": "5",
-      "oAmount": 1450,
+      "id": 106,
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "10",
+      "oAmount": 8990,
       "oPaymentType": "UPI PaymentMethods",
       "oPayment": "Pending",
-      "oDate": "2022-06-10T18:30:00.000Z",
-      "oStatus": "Pending",
-      "reportIssue": null,
-      "supplier": "Naina"
-    },
-    {
-      "id": "BYlFz-U",
-      "pId": "103",
-      "productName": "Juice",
-      "oNoOfProducts": "2",
-      "oAmount": 580,
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Done",
-      "oDate": "2023-01-02T18:30:00.000Z",
-      "oStatus": "Pending",
-      "reportIssue": null,
-      "supplier": "Naina"
-    },
-    {
-      "id": "81azN1R",
-      "pId": "101",
-      "productName": "Ghee",
-      "oNoOfProducts": "24",
-      "oAmount": 21576,
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Done",
-      "oDate": "2023-01-31T18:30:00.000Z",
+      "oDate": "2023-01-30T18:30:00.000Z",
       "oStatus": "Pending",
       "reportIssue": "",
-      "supplier": "Nammu"
+      "supplier": "Madhav"
     },
     {
-      "id": "BxqtG8e",
+      "id": 107,
       "pId": "101",
       "productName": "Ghee",
-      "oNoOfProducts": "2",
-      "oAmount": 1798,
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Done",
-      "oDate": "2023-01-09T18:30:00.000Z",
+      "oNoOfProducts": "10",
+      "oAmount": 8990,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
       "oStatus": "Pending",
       "reportIssue": "",
-      "supplier": "Nammu"
+      "supplier": "Madhav"
     },
     {
-      "id": "GmEPeW4",
+      "id": 108,
       "pId": "103",
       "productName": "Juice",
-      "oNoOfProducts": "2",
-      "oAmount": 580,
+      "oNoOfProducts": "10",
+      "oAmount": 2900,
       "oPaymentType": "UPI PaymentMethods",
       "oPayment": "Done",
-      "oDate": "2023-01-09T18:30:00.000Z",
-      "oStatus": "Returned",
-      "reportIssue": "Expired"
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Madhav"
+    },
+    {
+      "id": 109,
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "12",
+      "oAmount": 3480,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Pending",
+      "oDate": "2023-01-23T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "paridhi"
+    },
+    {
+      "id": 110,
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "12",
+      "oAmount": 10788,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-24T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Naina"
+
     }
   ]
 }

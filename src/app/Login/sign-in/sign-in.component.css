@@ -4,9 +4,23 @@
   max-width: 300px;
   margin: auto;
 
-  background: rgb(220, 214, 241); 
+
+  background: rgb(220, 214, 241);
   padding: 48px;
-  border-radius: 16px
+  border-radius: 16px;
+
+  /* @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+  
 }
 
 .form-container mat-form-field

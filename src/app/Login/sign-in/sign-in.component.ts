@@ -43,7 +43,7 @@ export class SignInComponent implements OnInit {
     this.authService
       .login(email, password)
       .subscribe(() => {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/adminDashboard']);
       });
   }
   

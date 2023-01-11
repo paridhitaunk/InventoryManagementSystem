@@ -13,7 +13,9 @@ export class AddProductComponent {
 
   ProductForm = this.fb.group({
     id: ['',[Validators.required]],
-    pName: ['',[Validators.required,Validators.minLength(2)]],
+
+    pName: ['',[Validators.required,Validators.pattern('[a-zA-Z ]*'),Validators.minLength(2)]],
+
     pPrice: ['',[Validators.required]],
     pMfgDate: ['',[Validators.required]],
     pExpiryDate: ['',Validators.required],
