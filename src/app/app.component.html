@@ -73,7 +73,7 @@
     <mat-nav-list (click)="sidenav.close()">
       <br />
 
-      <a mat-raised-button color="accent" class="menu" routerLink="/adminDashboard">
+      <a mat-raised-button class="menu" routerLink="/adminDashboard">
         <mat-icon>apps</mat-icon>
 
         <mat-label>Dashboard</mat-label>
@@ -81,7 +81,7 @@
 
       <br /><br />
 
-      <a mat-raised-button style="background-color: rgb(204, 166, 240); border-radius: 30px" class="menu"
+      <a mat-raised-button class="menu"
         routerLink="product">
         <mat-icon style="float: left">dehaze</mat-icon> &nbsp;
 
@@ -90,7 +90,7 @@
 
       <br /><br />
 
-      <a mat-raised-button style="background-color: rgb(204, 166, 240); border-radius: 30px" class="menu"
+      <a mat-raised-button  class="menu"
         routerLink="orderDetails">
         <mat-icon style="float: left">dehaze</mat-icon> &nbsp;
 
@@ -99,7 +99,7 @@
 
       <br /><br />
 
-      <a mat-raised-button style="background-color: rgb(204, 166, 240); border-radius: 30px" class="menu"
+      <a mat-raised-button  class="menu"
         routerLink="supplier">
         <mat-icon style="float: left">dehaze</mat-icon> &nbsp;
 
@@ -110,22 +110,13 @@
 
   <mat-toolbar color="primary" class="toolbar" *ngIf="authService.currentUser$ | async as user">
     <button mat-icon-button (click)="sidenav.open()">
-      <mat-icon style="color: rgb(236, 225, 105)">apps</mat-icon>
+      <mat-icon style="color: rgb(242, 241, 233)">apps</mat-icon>
 
-      <button mat-stroked-button color="accent" style="margin-top: -8px; font-size: small">
+      <button mat-stroked-button  style="margin-top: -8px; font-size: small">
         Dashboard
       </button>
     </button>
 
-    <a mat-raised-button color="accent" class="IMS" routerLink="/" style="
-        height: 60px;
-        margin-top: 1px;
-        margin-left: 300px;
-        font-size: x-large;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      ">
-      <mat-label>Inventory Management System</mat-label>
-    </a>
   </mat-toolbar>
 
   <router-outlet></router-outlet>
