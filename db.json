@@ -241,6 +241,19 @@
       "oStatus": "Pending",
       "reportIssue": "",
       "supplier": "Nammu"
+    },
+    {
+      "id": 119,
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "2",
+      "oAmount": 1798,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-09T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Yogi"
     }
   ]
 }
