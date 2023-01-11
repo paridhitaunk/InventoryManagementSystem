@@ -113,12 +113,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment.prod';
-import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 import { TrackOrderComponent } from './Supplier/track-order/track-order.component';
 import { DeliveredComponent } from './Supplier/delivered/delivered.component';
 import { PendingComponent } from './Supplier/pending/pending.component';
 import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
 import { ReturnedComponent } from './Supplier/returned/returned.component';
+import { MainComponent } from './Login/main/main.component';
 
 @NgModule({
   declarations: [
@@ -139,9 +139,15 @@ import { ReturnedComponent } from './Supplier/returned/returned.component';
     SignUpComponent,
     OrderDetailsComponent,
     OrderlistComponent,
-
+    TrackOrderComponent,
+    DeliveredComponent,
+    PendingComponent,
+    CancelledComponent,
+    ReturnedComponent,
+    
     ReturnStockComponent,
-    SupplierLoginComponent
+    SupplierLoginComponent,
+    MainComponent
 
   ],
 
