@@ -71,8 +71,7 @@
   </ng-template>
    </mat-toolbar> -->
 
-   </mat-toolbar> -->
-
+  
 
 
    <mat-sidenav-container fullscreen>
@@ -154,19 +153,9 @@
       <button mat-icon-button (click)="sidenav.open()">
   
         <mat-icon style="color: rgb(242, 241, 233)">apps</mat-icon>
-  
-  
-  
         <button mat-stroked-button style="margin-top: -8px; font-size: small">
-  
           Dashboard
-  
         </button>
-
-  
-      
-  
-  
       </button>
   
   
@@ -179,12 +168,10 @@
       </ng-container>
 
   
-        <button mat-stroked-button style="margin-top: -8px; font-size: small">
+        <!-- <button mat-stroked-button style="margin-top: -8px; font-size: small">
           Dashboard
-        </button>
+        </button> -->
   
-  
-      </button>
   
   
       <ng-container *ngIf="authService.currentUser$ | async as user">
