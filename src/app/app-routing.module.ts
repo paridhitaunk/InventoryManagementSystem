@@ -25,6 +25,7 @@ import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
 import { DeliveredComponent } from './Supplier/delivered/delivered.component';
 import { PendingComponent } from './Supplier/pending/pending.component';
 import { ReturnedComponent } from './Supplier/returned/returned.component';
+import { MainComponent } from './Login/main/main.component';
 
 const routes: Routes = [
   {path:"signIn",component:SignInComponent},
@@ -47,7 +48,7 @@ const routes: Routes = [
   {path:"product",component:ProductComponent},
   {path:"addProduct",component:AddProductComponent},
   {path:"orderDetails",component:OrderDetailsComponent},
-  // {path:"orderList",component:OrderlistComponent},
+  {path:"mainPage",component:MainComponent},
   
   {path:"supplierLogin",component:SupplierLoginComponent}
 
