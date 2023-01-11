@@ -48,7 +48,7 @@
   </mat-toolbar>
   
 
-<!-- <app-supplier></app-supplier> -->
+< <app-supplier></app-supplier> -->
 <!-- <app-admin-dashboard></app-admin-dashboard> -->
 <!-- <app-admin></app-admin> -->
 <!-- <app-product></app-product> -->
@@ -140,8 +140,9 @@
         Dashboard
       </button>
     </button>
-
+    
     <a
+    
       mat-raised-button
       color="accent"
       class="IMS"
@@ -156,6 +157,10 @@
     >
       <mat-label>Inventory Management System</mat-label>
     </a>
+
+    <ng-container *ngIf="authService.currentUser$ | async as user">
+      <button mat-button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+    </ng-container>
   </mat-toolbar>
 
   <router-outlet></router-outlet>

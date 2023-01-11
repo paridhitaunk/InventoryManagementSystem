@@ -9,7 +9,6 @@ import { ProductComponent } from './Product/product/product.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
-import { OrderlistComponent } from './Order/order-list/order-list.component';
 
 import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
@@ -25,28 +24,29 @@ import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
 import { DeliveredComponent } from './Supplier/delivered/delivered.component';
 import { PendingComponent } from './Supplier/pending/pending.component';
 import { ReturnedComponent } from './Supplier/returned/returned.component';
+import { AuthGuardGuard } from './Services/auth-guard.guard';
 
 const routes: Routes = [
   {path:"signIn",component:SignInComponent},
   {path: '', pathMatch:'full', component:SignInComponent},
   {path:"signUp",component:SignUpComponent},
-  {path:"orderList",component:AdminComponent},
-  {path:"adminDashboard",component:AdminDashboardComponent},
-  {path:"makePayment",component:MakePaymentComponent},
-  {path:"reportQuality",component:ReportQualityComponent},
+  {path:"orderList",canActivate:[AuthGuardGuard],component:AdminComponent},
+  {path:"adminDashboard",canActivate:[AuthGuardGuard],component:AdminDashboardComponent},
+  {path:"makePayment",canActivate:[AuthGuardGuard],component:MakePaymentComponent},
+  {path:"reportQuality",canActivate:[AuthGuardGuard],component:ReportQualityComponent},
   
-  {path:"supplier",component:SupplierComponent},
-  {path:"addSupplier",component:AddSupplierComponent},
-  {path:"receivePayment",component:ReceivePaymentComponent},
-  {path:"trackOrder",component:TrackOrderComponent},
-  {path:"deliveredOrder",component:DeliveredComponent},
-  {path:"pendingOrder",component:PendingComponent},
-  {path:"returnedOrder",component:ReturnedComponent},
-  {path:"cancelledOrder",component:CancelledComponent},
+  {path:"supplier",canActivate:[AuthGuardGuard],component:SupplierComponent},
+  {path:"addSupplier",canActivate:[AuthGuardGuard],component:AddSupplierComponent},
+  {path:"receivePayment",canActivate:[AuthGuardGuard],component:ReceivePaymentComponent},
+  {path:"trackOrder",canActivate:[AuthGuardGuard],component:TrackOrderComponent},
+  {path:"deliveredOrder",canActivate:[AuthGuardGuard],component:DeliveredComponent},
+  {path:"pendingOrder",canActivate:[AuthGuardGuard],component:PendingComponent},
+  {path:"returnedOrder",canActivate:[AuthGuardGuard],component:ReturnedComponent},
+  {path:"cancelledOrder",canActivate:[AuthGuardGuard],component:CancelledComponent},
 
-  {path:"product",component:ProductComponent},
-  {path:"addProduct",component:AddProductComponent},
-  {path:"orderDetails",component:OrderDetailsComponent},
+  {path:"product",canActivate:[AuthGuardGuard],component:ProductComponent},
+  {path:"addProduct",canActivate:[AuthGuardGuard],component:AddProductComponent},
+  {path:"orderDetails",canActivate:[AuthGuardGuard],component:OrderDetailsComponent},
   // {path:"orderList",component:OrderlistComponent},
   
   {path:"supplierLogin",component:SupplierLoginComponent}

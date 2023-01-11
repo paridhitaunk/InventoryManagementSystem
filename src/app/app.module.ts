@@ -104,16 +104,13 @@ import { MakePaymentComponent } from './Admin/make-payment/make-payment.componen
 import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
 import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
-import { OrderDetailsComponent } from './Order/order-details/order-details.component';
-import { OrderlistComponent } from './Order/order-list/order-list.component';
-import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
+import { OrderDetailsComponent } from './Order/order-details/order-details.component';import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
 import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment.prod';
-import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 import { TrackOrderComponent } from './Supplier/track-order/track-order.component';
 import { DeliveredComponent } from './Supplier/delivered/delivered.component';
 import { PendingComponent } from './Supplier/pending/pending.component';
@@ -138,7 +135,11 @@ import { ReturnedComponent } from './Supplier/returned/returned.component';
     SignInComponent,
     SignUpComponent,
     OrderDetailsComponent,
-    OrderlistComponent,
+    TrackOrderComponent,
+    DeliveredComponent,
+    PendingComponent,
+    CancelledComponent,
+    ReturnedComponent,
 
     ReturnStockComponent,
     SupplierLoginComponent
