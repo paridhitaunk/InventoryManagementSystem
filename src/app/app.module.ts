@@ -104,7 +104,8 @@ import { MakePaymentComponent } from './Admin/make-payment/make-payment.componen
 import { ReportQualityComponent } from './Admin/report-quality/report-quality.component';
 import { SignInComponent } from './Login/sign-in/sign-in.component';
 import { SignUpComponent } from './Login/sign-up/sign-up.component';
-import { OrderDetailsComponent } from './Order/order-details/order-details.component';import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
+import { OrderDetailsComponent } from './Order/order-details/order-details.component';
+import { ReturnStockComponent } from './Admin/return-stock/return-stock.component';
 
 import { SupplierLoginComponent } from './Login/supplier-login/supplier-login.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
@@ -116,6 +117,7 @@ import { DeliveredComponent } from './Supplier/delivered/delivered.component';
 import { PendingComponent } from './Supplier/pending/pending.component';
 import { CancelledComponent } from './Supplier/cancelled/cancelled.component';
 import { ReturnedComponent } from './Supplier/returned/returned.component';
+import { MainComponent } from './Login/main/main.component';
 
 @NgModule({
   declarations: [
@@ -140,9 +142,9 @@ import { ReturnedComponent } from './Supplier/returned/returned.component';
     PendingComponent,
     CancelledComponent,
     ReturnedComponent,
-
     ReturnStockComponent,
-    SupplierLoginComponent
+    SupplierLoginComponent,
+    MainComponent
 
   ],
 
