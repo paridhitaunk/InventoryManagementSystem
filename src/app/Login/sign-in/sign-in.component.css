@@ -5,7 +5,9 @@
   margin: auto;
 
 
+
   background: rgb(233, 239, 239);
+
   padding: 48px;
   border-radius: 16px;
 
@@ -45,7 +47,9 @@
   text-align:center;
 }
 
+
 .Login-Bt{
   background-color: #017e84;
   color: azure;
+
 }

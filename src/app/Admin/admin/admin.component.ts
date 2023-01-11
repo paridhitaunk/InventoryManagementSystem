@@ -18,6 +18,7 @@ interface IOrderStatus {
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  notifySer: any;
   constructor(public dialog: MatDialog,private service:InventoryServicesService){}
   Order_LIST: Order[];
   dataSource = new MatTableDataSource<Order>([]);
@@ -56,5 +57,31 @@ export class AdminComponent {
   }
   returnStocks(element:any){
     const dialogRefForIssue=this.dialog.open(ReturnStockComponent,{data:element});
+  }
+  cancelOrder(element:any){
+
+    element.oStatus='Canceled';
+ 
+    this.service.updateOrderDetails(element.id,element).subscribe({
+ 
+     next:(res)=>{
+ 
+     this.notifySer.showSuccess('Order canceled successfully','');
+ 
+     setTimeout(()=>{
+ 
+       window.location.reload();
+ 
+     },3000);
+ 
+     },
+ 
+     error:(err)=>{
+ 
+       this.notifySer.showError('Error occurred while canceling order:'+err,'');
+ 
+     }
+ 
+    })
   }
 }

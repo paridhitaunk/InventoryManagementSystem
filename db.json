@@ -79,55 +79,6 @@
   ],
   "OrderDetails": [
     {
-      "id": 101,
-      "oNoOfProducts": "12",
-      "oAmount": "212334",
-      "oPaymentType": "CashOnDeleviery",
-      "oPayment": "Done",
-      "oDate": "2023-01-30T18:30:00.000Z",
-      "oStatus": "Delivered"
-    },
-    {
-      "id": 102,
-      "pId": "111",
-      "oNoOfProducts": "2",
-      "oAmount": "900",
-      "oPaymentType": "CashOnDeleviery",
-      "oPayment": "Pending",
-      "oDate": "2023-01-03T18:30:00.000Z",
-      "oStatus": "Canceled"
-    },
-    {
-      "id": 103,
-      "pId": "3",
-      "oNoOfProducts": "2",
-      "oAmount": "450",
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Pending",
-      "oDate": "2022-02-01T18:30:00.000Z",
-      "oStatus": "Pending"
-    },
-    {
-      "id": 104,
-      "pId": "9",
-      "oNoOfProducts": "3",
-      "oAmount": "280",
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Processing",
-      "oDate": "2022-12-31T18:30:00.000Z",
-      "oStatus": "Delivered"
-    },
-    {
-      "id": 105,
-      "pId": "34",
-      "oNoOfProducts": "5",
-      "oAmount": "2500",
-      "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Done",
-      "oDate": "2023-01-31T18:30:00.000Z",
-      "oStatus": "Pending"
-    },
-    {
       "id": 106,
       "pId": "101",
       "productName": "Ghee",
@@ -136,9 +87,8 @@
       "oPaymentType": "UPI PaymentMethods",
       "oPayment": "Pending",
       "oDate": "2023-01-30T18:30:00.000Z",
-      "oStatus": "Pending",
-      "reportIssue": "",
-      "supplier": "Madhav"
+      "oStatus": "Canceled",
+      "reportIssue": "expired"
     },
     {
       "id": 107,
@@ -191,7 +141,32 @@
       "oStatus": "Pending",
       "reportIssue": "",
       "supplier": "Naina"
-
+    },
+    {
+      "id": 111,
+      "pId": "111",
+      "productName": "Surf Excel",
+      "oNoOfProducts": "12",
+      "oAmount": 3588,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "paridhi"
+    },
+    {
+      "id": 112,
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "12",
+      "oAmount": 3480,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Pending",
+      "oDate": "2023-01-15T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Nammu"
     }
   ]
 }
