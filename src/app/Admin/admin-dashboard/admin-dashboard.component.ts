@@ -28,7 +28,7 @@ export class AdminDashboardComponent {
   
        this.deliveredOrderCount = data.filter(x=>x.oStatus=='Delivered').length;
   
-       //console.log(this.deliveredOrderCount);
+       console.log(this.deliveredOrderCount);
   
      })
   
@@ -36,7 +36,7 @@ export class AdminDashboardComponent {
   
       this.totalOrderCount = data.length;
   
-     // console.log(this.totalOrderCount);
+     console.log(this.totalOrderCount);
   
      })
   
@@ -44,7 +44,7 @@ export class AdminDashboardComponent {
   
       this.productCount=data.length;
   
-      //console.log(this.productCount)
+      console.log(this.productCount)
   
      })
   
@@ -52,17 +52,17 @@ export class AdminDashboardComponent {
   
       this.supplierCount=data.length;
   
-      //console.log(this.supplierCount)
+      console.log(this.supplierCount)
   
      })
   
-     this.inventorySer.userGetData().subscribe((data:any) => {
+    //  this.inventorySer.userGetData().subscribe((data:any) => {
   
-      this.userCount=data.length;
+    //   this.userCount=data.length;
   
-      //console.log(this.userCount)
+    //   //console.log(this.userCount)
   
-     })
+    //  })
   
     }
   
