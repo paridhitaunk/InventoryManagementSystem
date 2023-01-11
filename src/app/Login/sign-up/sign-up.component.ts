@@ -54,10 +54,12 @@ export class SignUpComponent {
   submit()
   {
     if(!this.signUpForm.valid) return;
-
+    
     const {name, email, password} = this.signUpForm.value;
+    
     this.authService.signup(name,email,password).subscribe(()=>
-    this.router.navigate(['/login']));
+    this.router.navigate(['/signIn']));
+    
   }
 
 }

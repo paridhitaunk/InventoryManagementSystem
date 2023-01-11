@@ -30,7 +30,7 @@ import { MainComponent } from './Login/main/main.component';
 
 const routes: Routes = [
   {path:"signIn",component:SignInComponent},
-  {path: '', pathMatch:'full', component:SignInComponent},
+  {path: '', pathMatch:'full', component:MainComponent},
   {path:"signUp",component:SignUpComponent},
   {path:"orderList",canActivate:[AuthGuardGuard],component:AdminComponent},
   {path:"adminDashboard",canActivate:[AuthGuardGuard],component:AdminDashboardComponent},
