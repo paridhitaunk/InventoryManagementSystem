@@ -1,125 +1,64 @@
 <!-- <mat-sidenav-container fullscreen>
-
   <mat-sidenav #sidenav class="side-nav">
-
     <mat-nav-list (click)="sidenav.close()">
 
-
-
       <br>
-
       <a mat-raised-button color="accent" class="menu" routerLink="/adminDashboard"  >
-
         <mat-icon>apps</mat-icon>
-
         <mat-label>Dashboard</mat-label>
-
       </a>
 
-
-
       <br><br>
-
       <a mat-raised-button style="background-color: rgb(204, 166, 240);border-radius: 30px;" class="menu"
-
         routerLink="product">
-
         <mat-icon style="float:left;">dehaze</mat-icon> &nbsp;
-
         <span>Products</span>
-
       </a>
 
-
-
       <br><br>
-
       <a mat-raised-button style="background-color: rgb(204, 166, 240);border-radius: 30px;" class="menu"
-
         routerLink="orderDetails">
-
         <mat-icon style="float:left;">dehaze</mat-icon> &nbsp;
-
         <span>  Orders &nbsp;</span>
-
       </a>
-
-
 
       <br><br>
-
       <a mat-raised-button style="background-color: rgb(204, 166, 240);border-radius: 30px;" class="menu"
-
         routerLink="supplier">
-
         <mat-icon style="float:left;">dehaze</mat-icon> &nbsp;
-
         <span>Supplier</span>
-
       </a>
-
-
 
     </mat-nav-list>
-
   </mat-sidenav>
 
-
-
   <mat-toolbar color="primary" class="toolbar">
-
     <button mat-icon-button (click)="sidenav.open()" >
-
       <mat-icon style="color: rgb(236, 225, 105);">apps</mat-icon>
-
       <button mat-stroked-button color="accent" style="margin-top:-8px ;font-size:small;">Dashboard</button>
-
     </button>
 
-
-
     <a mat-raised-button color="accent" class="IMS" routerLink="/"
-
       style="height: 60px; margin-top: 1px;margin-left: 400px; font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-
       <mat-label>Inventory Management System</mat-label>
-
     </a>
 
 
 
-
-
   </mat-toolbar>
-
  
-
-
-
 <app-supplier></app-supplier> -->
 
 <!-- <app-admin-dashboard></app-admin-dashboard> -->
-
 <!-- <app-admin></app-admin> -->
-
 <!-- <app-product></app-product> -->
-
 <!-- <app-orderlist></app-orderlist>  -->
-
 <!-- <app-add-product></app-add-product> -->
-
 <!-- <app-supplier-login></app-supplier-login> -->
-
 <!-- <app-add-product></app-add-product> -->
-
 <!-- <mat-toolbar color="primary">
 
-
-
-    Sign-Up with firebase
-
     <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
-
     <button mat-button (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
 
   </ng-container>
@@ -129,8 +68,8 @@
   <ng-template #loginButton>
 
     <button mat-button routerLink="login"><mat-icon>login</mat-icon>Login</button>
-
   </ng-template>
+   </mat-toolbar> -->
 
    </mat-toolbar> -->
 
@@ -223,8 +162,9 @@
           Dashboard
   
         </button>
+
   
-  
+      
   
   
       </button>
@@ -237,21 +177,25 @@
         <button mat-button style="margin-left: 980px;" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
   
       </ng-container>
+
   
+        <button mat-stroked-button style="margin-top: -8px; font-size: small">
+          Dashboard
+        </button>
+  
+  
+      </button>
+  
+  
+      <ng-container *ngIf="authService.currentUser$ | async as user">
+        <button mat-button style="margin-left: 980px;" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+      </ng-container>
     </mat-toolbar>
-  
-  
   
     <router-outlet></router-outlet>
   
-  
-  
     <!-- <ng-template #loginButton>
-  
       <app-sign-in></app-sign-in>
-  
      </ng-template> -->
-  
   </mat-sidenav-container>
-  
   <!-- <app-create-order></app-create-order> -->
