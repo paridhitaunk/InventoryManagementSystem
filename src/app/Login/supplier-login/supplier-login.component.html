@@ -5,8 +5,9 @@
       <img class="logo" width="60px" height="60px" src="https://raw.githubusercontent.com/paridhitaunk/InventoryManagementSystem/main/src/app/Login/main/IMSlogo.png">
 
       <span style="color: #017E84;">Inventory Management System</span>
-      <a mat-raised-button class="loginButton" routerLink="/signIn">
-          <mat-label>Login</mat-label>
+      <a mat-raised-button class="loginButton" (click)="logout()">
+        <mat-icon>logout</mat-icon> 
+        <mat-label>Logout</mat-label>
       </a>
   </mat-toolbar>
 

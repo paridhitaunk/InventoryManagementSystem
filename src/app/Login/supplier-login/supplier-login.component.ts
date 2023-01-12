@@ -3,6 +3,7 @@ import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { getAuth } from "firebase/auth";
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { SupplierForm } from 'src/app/Models/Supplier';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-supplier-login',
   templateUrl: './supplier-login.component.html',
@@ -10,8 +11,14 @@ import { SupplierForm } from 'src/app/Models/Supplier';
 })
 export class SupplierLoginComponent {
 
-  constructor(private authService:AuthenticationService,private service:InventoryServicesService){}
+  constructor(private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
 
+  logout(){
+    this.authService.logout().subscribe(()=>{
+      this.router.navigate(['']);
+    });
+  }
+ arr:[];
   
   username:any;
   suppliers:SupplierForm[];
