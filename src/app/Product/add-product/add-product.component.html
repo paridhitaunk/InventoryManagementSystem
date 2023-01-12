@@ -1,10 +1,12 @@
+<br><br><br><br><br>
 
-<mat-card class="example-card">
+<mat-card class="example-card" class="form">
     <div class="form" >
         <mat-card-header>
-            <mat-card-title  style="margin-left: 200px;color: darkblue; text-align: center; background-color: rgb(234, 225, 243);">Add Product</mat-card-title>
+          <h1 class="addProduct"><b>Add Product</b></h1>
           </mat-card-header>
           <br>
+          
           <mat-card-content>
         <form class="example-form" [formGroup]="ProductForm" (ngSubmit)="onSubmit()">
           <mat-form-field appearance="fill">
@@ -60,8 +62,5 @@
         </form>
         </mat-card-content>
         </div>
-        <mat-card-footer>
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-          </mat-card-footer>
     </mat-card>
 

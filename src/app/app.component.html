@@ -1,4 +1,4 @@
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen navbar-fixed-top>
   <mat-sidenav #sidenav class="side-nav">
     <mat-nav-list (click)="sidenav.close()">
         <br /> 
@@ -8,21 +8,30 @@
         </a>  
   
         <br /><br />
-        <a mat-stroked-button class="menu" routerLink="product">
+        <a mat-stroked-button class="menu" routerLink="/product">
         <mat-icon style="float: left">shopping_cart</mat-icon> &nbsp;
           <span>Products</span>
         </a>
   
         <br /><br />
       
-        <a mat-stroked-button class="menu" routerLink="orderDetails">
+        <a mat-stroked-button class="menu" routerLink="/orderDetails">
           <mat-icon style="float: left">add_shopping_cart</mat-icon> &nbsp;
-          <span> Orders &nbsp;</span>
+          <span> Purchase  </span>
+        </a>
+
+        
+        <br /><br />
+      
+        <a mat-stroked-button class="menu" routerLink="/orderList">
+          <mat-icon style="float: left">add_shopping_cart</mat-icon> &nbsp;
+          <span> Orders List &nbsp;</span>
         </a>
    
+      
         <br /><br />
   
-        <a mat-stroked-button class="menu" routerLink="supplier">
+        <a mat-stroked-button class="menu" routerLink="/supplier">
           <mat-icon style="float: left">dehaze</mat-icon> &nbsp;  
           <span>Supplier</span>
         </a>
@@ -50,3 +59,4 @@
     <router-outlet></router-outlet>
   
 </mat-sidenav-container>
+
