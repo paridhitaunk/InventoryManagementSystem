@@ -7,10 +7,15 @@ import { BehaviorSubject } from 'rxjs';
 export class CommonServiceService {
   sourceValue = new BehaviorSubject("");
   currentValue=this.sourceValue.asObservable();
+  userData:any;
   constructor() { }
 
   public changeValue(value:string){
     this.sourceValue.next(value);
   }
-  
+
+  getUserData(user:any)
+  {
+    this.userData=user;
+  }
 }
