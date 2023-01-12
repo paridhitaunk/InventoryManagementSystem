@@ -44,25 +44,30 @@ export class SignInComponent implements OnInit {
     {
       this.notifySer.showError('There is an error logging in','');
       return;
-
     }
     else if (email== "admin@gmail.com")
     {
       this.authService
       .login(email, password)
-      .subscribe(() => {
+      .subscribe({next:() => {
         this.notifySer.showSuccess('Logged In Successfully','');
         this.router.navigate(['/adminDashboard']);
-      });
+      },error:(response)=>{
+        this.notifySer.showError(`${response}`,'');
+      }}
+      );
     }
     else
     {
       this.authService
       .login(email, password)
-      .subscribe(() => {
+      .subscribe({next:() => {
         this.notifySer.showSuccess('Logged In Successfully','');
         this.router.navigate(['/supplierLogin']);
-      });
+      },error:(response)=>{
+        this.notifySer.showError(`${response}`,'');
+    }}
+      );
     }
   }
 }
