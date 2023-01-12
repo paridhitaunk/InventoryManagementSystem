@@ -3,11 +3,17 @@
     width: 190px;
     margin-left: 10px;
     border-radius: 30px;
+    position: fixed;
+
 }
 
 .toolbar {
     background-color: #22595c;
     height: 70px;
+    position: fixed;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+    
 }
 
 /* .dashboard{
