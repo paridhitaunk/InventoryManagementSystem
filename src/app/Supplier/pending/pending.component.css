@@ -16,6 +16,14 @@
     border-radius: 50px;
 }
 
+.user
+{
+  color:#1a686c;
+  margin-left:630px;
+  float:left;
+  
+}
+
 .toolbar {
     height: 70px;
     position: fixed;
@@ -27,7 +35,6 @@
     color: #f1f4f4;
     background-color: #1a686c ;
     height: 40px;
-   margin-left: 780px;
     font-size: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }

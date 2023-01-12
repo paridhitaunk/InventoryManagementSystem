@@ -21,6 +21,7 @@ export class AuthenticationService {
     newUser.phoneNumber = phoneNumber;
     newUser.address = address;
     this.service.AddSupplier(newUser).subscribe();
+    console.log(newUser);
     return from(createUserWithEmailAndPassword(this.auth, email,password))
     .pipe(switchMap(({ user })=> updateProfile(user, {displayName: name})));
     

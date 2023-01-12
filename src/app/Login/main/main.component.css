@@ -81,7 +81,7 @@
     color: #f1f4f4;
     background-color: #017E84;
     height: 40px;
-   margin-left: 760px;
+   margin-left: 800px;
     font-size: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -90,6 +90,7 @@
 
 .toolbar {
     position: fixed;
+    height: 80px;
     top: 0; /* Sets the sticky toolbar to be on top */
     z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }

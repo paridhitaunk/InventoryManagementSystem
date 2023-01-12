@@ -3,6 +3,7 @@
   display: block;
   max-width: 300px;
   margin: auto;
+  margin-top: 20px;
   background: rgb(233, 239, 239);
   padding: 48px;
   border-radius: 16px;
@@ -20,6 +21,17 @@
     }
   } */
   
+}
+
+.toolbar {
+  position: fixed;
+  height: 80px;
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.logo{
+  border-radius: 50px;
 }
 
 .form-container mat-form-field
@@ -51,6 +63,6 @@
 }
 
 .bg-img{
-  margin-top: -428px;
+  margin-top: -500px;
   width: 800px; 
 }

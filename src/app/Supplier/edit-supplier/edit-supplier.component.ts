@@ -16,8 +16,8 @@ export class EditSupplierComponent {
   id: number;
 
   SupplierForm = this.fb.group({
-    id: ['', [Validators.required]],
-    name: ['', [Validators.required, Validators.maxLength(32)]],
+    id: [{value: '', disabled: true}, Validators.required],
+    name: [{value: '', disabled: true}, [Validators.required,Validators.maxLength(32)]],
     phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
     address: ['', Validators.required]
   })

@@ -10,12 +10,19 @@
   
 }
 
+.user
+{
+  color:#1a686c;
+  margin-left:620px;
+  float:left;
+  
+}
 
 .logoutButton {
   color: #f1f4f4;
   background-color: #1a686c ;
   height: 40px;
- margin-left: 780px;
+ margin-left: 0px;
   font-size: normal;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
