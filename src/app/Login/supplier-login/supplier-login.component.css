@@ -1,3 +1,17 @@
+.logo{
+  border-radius: 50px;
+}
+
+.loginButton {
+  color: #f1f4f4;
+  background-color: #1a686c ;
+  height: 40px;
+ margin-left: 1100px;
+  font-size: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* background-color: rgb(22, 95, 95);; */
+}
 .trackOrderCard {
   max-width: 400px;
   margin-left: 150px;

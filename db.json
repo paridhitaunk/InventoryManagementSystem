@@ -254,6 +254,19 @@
       "oStatus": "Pending",
       "reportIssue": "",
       "supplier": "Yogi"
+    },
+    {
+      "id": 120,
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "3",
+      "oAmount": 870,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-02T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Naina"
     }
   ]
 }

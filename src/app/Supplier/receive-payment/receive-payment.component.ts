@@ -16,9 +16,8 @@ export class ReceivePaymentComponent implements OnInit {
   ngOnInit():void
   {
    this.service.orderGetData().subscribe((data:Order[]) => {
-     this.Order_LIST = data.filter(x=>x.oPayment=='Done');
+     this.Order_LIST = data.filter( order => order.oPayment=='Done');
      {
-
      console.log(data);
      }
    })

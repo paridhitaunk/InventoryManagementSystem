@@ -66,6 +66,10 @@
     }
 }
 
+.logo{
+    border-radius: 50px;
+  }
+
 .signUp {
     background-color: #017E84;
     color: rgb(240, 248, 248);
@@ -77,7 +81,7 @@
     color: #f1f4f4;
     background-color: #017E84;
     height: 40px;
-   margin-left: 860px;
+   margin-left: 760px;
     font-size: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
