@@ -63,7 +63,7 @@ export class SupplierLoginComponent {
   //   this.get(this.username,this.suppliers)
   // }
 
-   get(username:any,suppliers:SupplierForm[],length:number): SupplierForm
+   get(username:any,suppliers:SupplierForm[]): SupplierForm
   {
     this.currentUser = suppliers[suppliers.findIndex(x => x.name== username, 1)]
     return this.currentUser;
