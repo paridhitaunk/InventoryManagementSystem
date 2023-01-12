@@ -1,7 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Order } from 'src/app/Models/orders';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
+import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 
 interface IOrderStatus {
   value: string;
@@ -16,6 +18,7 @@ interface IOrderStatus {
 export class PendingComponent implements OnInit {
 
   Order_LIST: Order[];
+  currentSupplier:any;
   displayedColumns = ['oId','oNoProduct','oAmount','oDate','oPayment','oPaymentType','oStatus'];
   orderStatus: IOrderStatus[] = [
     {value: '1', viewValue: 'Delivered'},
@@ -24,16 +27,21 @@ export class PendingComponent implements OnInit {
     {value: '4', viewValue: 'Returned'},
   ];
 
-  constructor(public dialog: MatDialog,private service:InventoryServicesService){}
+  constructor(public dialog: MatDialog,private service:InventoryServicesService,private commonServices:CommonServiceService){}
 
   ngOnInit():void
   {
-   this.service.orderGetData().subscribe((data:Order[]) => {
-     this.Order_LIST = data.filter( order => order.oStatus=='Pending');
-     {
-     console.log(data);
-     }
-   })
+  //  this.service.orderGetData().subscribe((data:Order[]) => {
+  //    this.Order_LIST = data.filter( order => order.oStatus=='Pending');
+  //    {
+  //    console.log(data);
+  //    }
+  //  })
+
+   this.currentSupplier= this.commonServices.userData;
+   this.service.orderGetData().subscribe((data: Order[]) => {
+     this.Order_LIST = data.filter((order) => order.oStatus == 'Pending' && order.supplier == this.currentSupplier.name );
+   });
   }
 
 }
