@@ -1,5 +1,7 @@
+<!-- <ng-container *ngIf="authService.currentUser$ | async as user"> -->
 <mat-sidenav-container fullscreen>
-  <mat-sidenav #sidenav class="side-nav">
+  <ng-container *ngIf="authService.currentUser$ | async as user">
+  <mat-sidenav  #sidenav class="side-nav">
     <mat-nav-list (click)="sidenav.close()">
         <br /> 
         <a mat-stroked-button class="dashboard" style="margin-left: 35px; background-color: #11393b; color: #d6edee; border-radius: 30px;" routerLink="/adminDashboard">
@@ -29,8 +31,8 @@
   
       </mat-nav-list>
     </mat-sidenav>
- 
-    <mat-toolbar color="primary" class="toolbar" *ngIf="authService.currentUser$ | async as user">
+    
+    <mat-toolbar color="primary" class="toolbar" >
 
       
       <ng-container >
@@ -40,13 +42,15 @@
       </ng-container>
 
 
-      <ng-container *ngIf="authService.currentUser$ | async as user">
+      <ng-container >
         <button mat-button class="logout-btn" (click)="logout()">
         <mat-icon>logout</mat-icon>Logout</button>
       </ng-container>
 
     </mat-toolbar>
+  </ng-container>
   
     <router-outlet></router-outlet>
   
 </mat-sidenav-container>
+<!-- </ng-container> -->

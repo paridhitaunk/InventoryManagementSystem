@@ -42,7 +42,7 @@ export class SupplierLoginComponent {
       //  console.log(this.suppliers);
 
        console.log(this.get(user,this.suppliers));
-       this.service.getCurrentUser(this.get(user,this.suppliers))
+      //  this.service.getCurrentUser(this.get(user,this.suppliers))
        this.commonServices.getUserData(this.currentUser);
        console.log(this.commonServices.userData);
      })      
