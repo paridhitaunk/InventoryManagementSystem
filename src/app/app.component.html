@@ -1,13 +1,12 @@
-
-<mat-sidenav-container  fullscreen navbar-fixed-top>
+<mat-sidenav-container fullscreen navbar-fixed-top>
 
   <mat-sidenav #sidenav class="side-nav">
 
-    <mat-nav-list  (click)="sidenav.close()">
+    <mat-nav-list (click)="sidenav.close()">
 
         <br />
 
-        <a mat-stroked-button *ngIf="flag" class="dashboard" style="margin-left: 35px; background-color: #11393b; color: #d6edee; border-radius: 30px;" routerLink="/adminDashboard">
+        <a mat-stroked-button class="dashboard" style="margin-left: 35px; background-color: #11393b; color: #d6edee; border-radius: 30px;" routerLink="/adminDashboard">
 
           <mat-icon>apps</mat-icon>
 

@@ -30,9 +30,8 @@ export class AddSupplierComponent {
   }
 
   onSubmit() {
-    if(!this.SupplierForm.valid) return;
-    const {name, email, password, address, phoneNumber} = this.SupplierForm.value;
-    
+
+
     this.service.AddSupplier(this.SupplierForm.value)
       .subscribe(response => {
         console.log(response)
