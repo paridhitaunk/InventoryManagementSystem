@@ -41,7 +41,7 @@ export class SupplierLoginComponent {
        this.lengtharray = this.suppliers.length
       //  console.log(this.suppliers);
 
-       console.log(this.get(user,this.suppliers));
+      //  console.log(this.get(user,this.suppliers));
       //  this.service.getCurrentUser(this.get(user,this.suppliers))
        this.commonServices.getUserData(this.currentUser);
        console.log(this.commonServices.userData);
