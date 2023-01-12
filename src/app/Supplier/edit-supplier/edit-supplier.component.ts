@@ -16,10 +16,10 @@ export class EditSupplierComponent {
   id: number;
 
   SupplierForm = this.fb.group({
-    sId: ['', [Validators.required]],
-    sName: ['', [Validators.required, Validators.maxLength(32)]],
-    sPhoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-    sAddress: ['', Validators.required]
+    id: ['', [Validators.required]],
+    name: ['', [Validators.required, Validators.maxLength(32)]],
+    phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
+    address: ['', Validators.required]
   })
   constructor(private fb: FormBuilder, private service: InventoryServicesService, private DialogRef: DialogRef, @Inject(MAT_DIALOG_DATA) public editData: any) { }
 
@@ -29,10 +29,10 @@ export class EditSupplierComponent {
         next: (res) => {
           this.isEdit = true;
           this.id = res.id;
-          this.SupplierForm.value.sId = res.sId;
-          this.SupplierForm.value.sName = res.sName;
-          this.SupplierForm.value.sPhoneNumber = res.sPhoneNumber;
-          this.SupplierForm.value.sAddress = res.sAddress;
+          this.SupplierForm.value.id = res.id;
+          this.SupplierForm.value.name = res.name;
+          this.SupplierForm.value.phoneNumber = res.phoneNumber;
+          this.SupplierForm.value.address = res.address;
         }
       })
     });
@@ -41,10 +41,10 @@ export class EditSupplierComponent {
     if (this.editData) {
       this.isEdit = true;
       this.id = this.editData.id;
-      this.SupplierForm.controls['sId'].setValue(this.editData.sId)
-      this.SupplierForm.controls['sName'].setValue(this.editData.sName)
-      this.SupplierForm.controls['sPhoneNumber'].setValue(this.editData.sPhoneNumber)
-      this.SupplierForm.controls['sAddress'].setValue(this.editData.sAddress)
+      this.SupplierForm.controls['id'].setValue(this.editData.id)
+      this.SupplierForm.controls['name'].setValue(this.editData.name)
+      this.SupplierForm.controls['phoneNumber'].setValue(this.editData.phoneNumber)
+      this.SupplierForm.controls['address'].setValue(this.editData.address)
 
     }
   }

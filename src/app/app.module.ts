@@ -244,7 +244,6 @@ import { MainComponent } from './Login/main/main.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,9 @@
 export class SupplierForm{
-    id:number;
-    sName:string;  
-    sPhoneNumber:string;  
-    sAddress:string;  
 
-  
+  public name:string;
+  public email: string;
+  public phoneNumber:number;
+  public address:string;
+  public id: number;
+
 }

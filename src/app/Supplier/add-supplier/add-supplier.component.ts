@@ -22,10 +22,10 @@ export class AddSupplierComponent {
   ngOnInit(): void {
 
     this.SupplierForm = this.fb.group({
-      sId: ['', [Validators.required]],
-      sName: ['', [Validators.required, Validators.maxLength(32)]],
-      sPhoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-      sAddress: ['', Validators.required]
+      id: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.maxLength(32)]],
+      phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
+      address: ['', Validators.required]
     })
   }
 

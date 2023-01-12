@@ -1,46 +1,18 @@
 {
   "Supplier": [
     {
-      "sId": "34",
-      "sName": "Madhav",
-      "sPhoneNumber": "8973999939",
-      "sAddress": "Indore",
-      "id": 29
+      "name": "mayank",
+      "email": "m@gmail.com",
+      "phoneNumber": "9144331591",
+      "address": "Ratlam",
+      "id": 101
     },
     {
-      "sId": "67",
-      "sName": "Naina",
-      "sPhoneNumber": "9800098000",
-      "sAddress": "Vidisha",
-      "id": 30
-    },
-    {
-      "sId": "56",
-      "sName": "Yogi",
-      "sPhoneNumber": "9870078999",
-      "sAddress": "Bhopal",
-      "id": 32
-    },
-    {
-      "sId": "68",
-      "sName": "Nammu",
-      "sPhoneNumber": "5678945678",
-      "sAddress": "Nagpur",
-      "id": 33
-    },
-    {
-      "sId": "12",
-      "sName": "paridhi",
-      "sPhoneNumber": "9521206684",
-      "sAddress": "Rajgarh",
-      "id": 34
-    }
-  ],
-  "User": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "harsha",
+      "email": "harsha@gmail.com",
+      "phoneNumber": "9521206684",
+      "address": "Indore",
+      "id": 102
     }
   ],
   "Product": [
