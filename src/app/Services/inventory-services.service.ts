@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import { SupplierForm } from 'src/app/Models/Supplier';
 import { Order } from '../Models/orders';
+import { user } from '../Models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -22,9 +23,9 @@ export class InventoryServicesService {
 
 
 
-    Save(obj:any){
-      console.log("save");
-      return this.http.post<any>(this.baseUrl+"/Users",obj);
+    Save(user:any){
+      console.log(user);
+      return this.http.post<any>(`${this.baseUrl}/Users`, user)
     }
   
     userGetData():Observable<any[]>

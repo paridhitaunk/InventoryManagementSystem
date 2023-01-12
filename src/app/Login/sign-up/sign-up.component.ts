@@ -28,10 +28,12 @@ export class SignUpComponent {
   constructor(private fb:FormBuilder,private rs:InventoryServicesService ,private _Router:Router, private authService:AuthenticationService, private router:Router) { }
 
   signUpForm = new FormGroup({
-    name: new FormControl(' ', [Validators.required]),
+    name: new FormControl('',[Validators.required, Validators.minLength(2)]),
     email: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl('',Validators.required),
-    confirmPassword: new FormControl('', Validators.required),
+    password: new FormControl('',[Validators.required]),
+    confirmPassword: new FormControl('', [Validators.required]),
+    phoneNumber: new FormControl('',[Validators.required]),
+    address: new FormControl('',[Validators.required]),
   },{ validators: passwordMatchValidator() }) //cross field validator
 
   get name() {
@@ -50,14 +52,21 @@ export class SignUpComponent {
     return this.signUpForm.get('confirmPassword');
   }
 
+  get address(){
+    return this.signUpForm.get('address');
+  }
+
+  get phoneNumber(){
+    return this.signUpForm.get('phoneNumber');
+  }
 
   submit()
   {
     if(!this.signUpForm.valid) return;
     
-    const {name, email, password} = this.signUpForm.value;
-    
-    this.authService.signup(name,email,password).subscribe(()=>
+    const {name, email, password, address, phoneNumber} = this.signUpForm.value;
+
+    this.authService.signup(name,email,password,phoneNumber,address).subscribe(()=>
     this.router.navigate(['/signIn']));
     
   }

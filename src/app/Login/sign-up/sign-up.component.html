@@ -47,6 +47,20 @@
     <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
       Passwords should match
   </mat-error>
+  <mat-form-field>
+    <mat-label>Phone Number</mat-label>
+    <input matInput placeholder="Enter number" formControlName="phoneNumber" />
+    <mat-error *ngIf="phoneNumber?.errors?.['required']">
+      Number is required
+    </mat-error>
+  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Enter Address" formControlName="address" />
+      <mat-error *ngIf="address?.errors?.['required']">
+        Address is required
+      </mat-error>
+    </mat-form-field>
     <div class="center margin-top">
       <button class="_submit" type="submit" mat-raised-button >Sign Up!</button>
     </div>

@@ -8,8 +8,8 @@
         <mat-form-field appearance="fill"class="example-full-width" >
           <mat-label>Supplier Name</mat-label>
           <mat-select formControlName="supplier">
-            <mat-option *ngFor="let supplier of suppliers" [value]="supplier.sName">
-              {{supplier.sName}}
+            <mat-option *ngFor="let supplier of suppliers" [value]="supplier.name">
+              {{supplier.name}}
             </mat-option>
           </mat-select>
         </mat-form-field>
