@@ -3,6 +3,7 @@ import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { getAuth } from "firebase/auth";
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { SupplierForm } from 'src/app/Models/Supplier';
+import { Router } from '@angular/router';
 import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 @Component({
   selector: 'app-supplier-login',
@@ -11,15 +12,21 @@ import { CommonServiceService } from 'src/app/SharedService/common-service.servi
 })
 export class SupplierLoginComponent {
 
-  constructor(private authService:AuthenticationService,private service:InventoryServicesService,private commonServices:CommonServiceService){}
+  constructor(private authService:AuthenticationService,private commonServices: CommonServiceService,private service:InventoryServicesService,private router:Router){}
 
+  logout(){
+    this.authService.logout().subscribe(()=>{
+      this.router.navigate(['']);
+    });
+  }
   
   username:any;
   suppliers:SupplierForm[];
-  currentUser:SupplierForm = {name:'',email:'',phoneNumber:0,id:0,address:''};
+  currentUser:SupplierForm;
   lengtharray:number;
   ngOnInit()
   {
+   
     var user = '';
     const auth = getAuth();
     user = auth.currentUser?.displayName as string;
@@ -46,14 +53,21 @@ export class SupplierLoginComponent {
        this.commonServices.getUserData(this.currentUser);
        console.log(this.commonServices.userData);
      })      
+
   }
 
 
-   get(username:any,suppliers:SupplierForm[]): SupplierForm
+
+  // ngAfterContentInit()
+  // {
+  //   this.get(this.username,this.suppliers)
+  // }
+
+   get(username:any,suppliers:SupplierForm[],length:number): SupplierForm
   {
     this.currentUser = suppliers[suppliers.findIndex(x => x.name== username, 1)]
-    this.currentUser.name = username;
     return this.currentUser;
+   
   }
    
   

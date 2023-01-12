@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/Models/orders';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 
@@ -16,6 +18,14 @@ interface IOrderStatus {
 })
 export class ReturnedComponent implements OnInit {
 
+  constructor(public dialog: MatDialog,private commonServices:CommonServiceService,private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
+
+  logout(){
+    this.authService.logout().subscribe(()=>{
+      this.router.navigate(['']);
+    });
+  }
+
   Order_LIST: Order[];
   currentSupplier:any;
   displayedColumns = ['oId','oNoProduct','oAmount','oDate','oPayment','oPaymentType','oStatus'];
@@ -25,8 +35,6 @@ export class ReturnedComponent implements OnInit {
     {value: '3', viewValue: 'Canceled'},
     {value: '4', viewValue: 'Returned'},
   ];
-
-  constructor(public dialog: MatDialog,private service:InventoryServicesService,private commonServices:CommonServiceService){}
 
   ngOnInit():void
   {

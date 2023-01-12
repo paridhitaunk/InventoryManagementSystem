@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/Models/orders';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 
@@ -27,7 +29,7 @@ export class PendingComponent implements OnInit {
     {value: '4', viewValue: 'Returned'},
   ];
 
-  constructor(public dialog: MatDialog,private service:InventoryServicesService,private commonServices:CommonServiceService){}
+  constructor(public dialog: MatDialog,private authService:AuthenticationService,private service:InventoryServicesService,private router:Router,private commonServices:CommonServiceService){}
 
   ngOnInit():void
   {
@@ -42,6 +44,12 @@ export class PendingComponent implements OnInit {
    this.service.orderGetData().subscribe((data: Order[]) => {
      this.Order_LIST = data.filter((order) => order.oStatus == 'Pending' && order.supplier == this.currentSupplier.name );
    });
+  }
+
+    logout(){
+    this.authService.logout().subscribe(()=>{
+      this.router.navigate(['']);
+    });
   }
 
 }
