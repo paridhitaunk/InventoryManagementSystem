@@ -1,0 +1,13 @@
+.example-container {
+    height: 350px;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -20px;
+    border: 1px solid #017e87;
+    padding: 10px;
+    box-shadow: 5px 12px #11393b;
+    background: #bddbde; 
+  }

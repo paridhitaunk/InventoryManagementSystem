@@ -9,10 +9,21 @@
     margin-top: 70px;
     padding: 20px;
     text-align: center;
+    background-color: rgb(203, 225, 234);
 }
 
 .form{
-   /* background-image: url("https://as2.ftcdn.net/v2/jpg/00/95/56/99/1000_F_95569904_pdEiF7YOpLBdStA0xcnVbmVR4S84ZF6F.jpg"); */
-   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWSgHyqCGB6Ft8b37R1dx_UQZQXD5OuI51A&usqp=CAU");
+    background-image: url('https://t3.ftcdn.net/jpg/05/25/33/20/240_F_525332019_92hYjYOvh0bQN9U0t0C84BF0dAhjZXVN.jpg');
+ }
+ 
+.editSupplier{
+    color: #11393b; 
+    text-align: center; 
+    background-color: rgb(201, 229, 237);
 }
 
+.update-Btn{
+    width: 130px;
+    background-color: #11393b;
+    color: aliceblue; 
+}

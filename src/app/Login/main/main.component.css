@@ -66,6 +66,10 @@
     }
 }
 
+.logo{
+    border-radius: 50px;
+  }
+
 .signUp {
     background-color: #017E84;
     color: rgb(240, 248, 248);
@@ -77,7 +81,7 @@
     color: #f1f4f4;
     background-color: #017E84;
     height: 40px;
-   margin-left: 860px;
+   margin-left: 760px;
     font-size: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -90,5 +94,12 @@
     z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
-
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:grey;
+    color: white;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 

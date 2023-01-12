@@ -1,10 +1,8 @@
 <form [formGroup]="SupplierForm" (ngSubmit)="onSubmit()" class="form">
-    <br>
-    <br>
-    <h1 style="color: rgb(0, 0, 148); text-align: center; background-color: rgb(234, 225, 243);"><b>Fill Supplier Form</b></h1>
 
-    <mat-card class="card" style="background-color: rgb(233, 215, 241); text-align: center;">
-
+    <br> <br>
+    <h1 class="fillSupplier"><b>Fill Supplier Form</b></h1>
+    <mat-card class="card">
 
         <div>
             <mat-form-field appearance="outline">
@@ -46,7 +44,7 @@
 
         <br>
         <div>
-            <button type="submit" mat-raised-button color="primary">Submit</button>
+            <button type="submit" mat-stroked-button class="submit-Btn">Submit</button>
         </div>
 
 
