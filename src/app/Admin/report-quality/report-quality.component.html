@@ -1,8 +1,7 @@
-<br><br><br><br><br>
 <mat-card class="example-card">
   <div class="form" >
       <mat-card-header>
-          <mat-card-title>Report quality issue</mat-card-title>
+          <mat-card-title class="report">Report quality issue</mat-card-title>
         </mat-card-header>
         <mat-card-content>
       <form class="example-form" [formGroup]="orderDetailsform">
@@ -25,13 +24,10 @@
           
         <div mat-dialog-action [align]="'end'">
           <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-          <button  style="margin-left: 8px;" mat-raised-button color="accent" (click)="raiseIssueReport()">Report</button>
+          <button  style="margin-left: 8px;background-color: orange;" mat-raised-button (click)="raiseIssueReport()">Report</button>
         
         </div>
       </form>
       </mat-card-content>
       </div>
-      <mat-card-footer>
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
   </mat-card>

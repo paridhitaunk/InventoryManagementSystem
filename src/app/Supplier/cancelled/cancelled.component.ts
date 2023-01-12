@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/Models/orders';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 
 interface IOrderStatus {
@@ -24,7 +26,7 @@ export class CancelledComponent implements OnInit {
     {value: '4', viewValue: 'Returned'},
   ];
 
-  constructor(public dialog: MatDialog,private service:InventoryServicesService){}
+  constructor(public dialog: MatDialog,private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
 
   ngOnInit():void
   {
@@ -36,4 +38,9 @@ export class CancelledComponent implements OnInit {
    })
   }
 
+  logout(){
+    this.authService.logout().subscribe(()=>{
+      this.router.navigate(['']);
+    });
+  }
 }
