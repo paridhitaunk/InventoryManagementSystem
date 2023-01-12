@@ -44,7 +44,10 @@ export class CancelledComponent implements OnInit {
   ngOnInit(): void {
     this.currentSupplier= this.commonServices.userData;
     this.service.orderGetData().subscribe((data: Order[]) => {
-      this.Order_LIST = data.filter((order) => order.oStatus == 'Canceled' && order.supplier == this.currentSupplier.name );
+      this.Order_LIST = data.filter((order) => order.oStatus == 'Canceled' );
+      {
+       this.Order_LIST = data.filter((order)=> order.supplier == this.currentSupplier.name)
+      }
     });
   }
 }

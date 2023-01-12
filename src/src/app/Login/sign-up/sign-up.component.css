@@ -1,0 +1,38 @@
+.form-container
+{
+  display: block;
+  max-width: 300px;
+  margin: auto;
+
+  background: rgb(233, 239, 239);
+  padding: 48px;
+  border-radius: 16px
+}
+
+.form-container mat-form-field
+{
+  background-color: #eceff1;
+  width: 100%;
+}
+
+.center
+{
+  display:flex;
+  justify-content: center;
+}
+
+.margin-top
+{
+  margin-top: 16px;
+}
+
+.text-center
+{
+  text-align:center;
+}
+
+._submit{
+  background-color: #008187;
+  color: azure;
+
+}

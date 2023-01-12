@@ -1,0 +1,25 @@
+.example-container {
+  height: 600px;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rebeccapurple;
+  padding: 10px;
+  box-shadow: 5px 12px rgb(79, 39, 99);
+  background: rgb(220, 214, 241); 
+}
+    
+    table {
+      align-content: center;
+      width: 100%;
+    }
+
+    .header{
+      font-weight: bold;
+      font-size: larger;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(33, 24, 76);
+    }
+  
