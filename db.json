@@ -75,6 +75,19 @@
       "oStatus": "Pending",
       "reportIssue": "",
       "supplier": "harsha"
+    },
+    {
+      "id": 123,
+      "pId": "111",
+      "productName": "Surf Excel",
+      "oNoOfProducts": "20",
+      "oAmount": 5980,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Pending",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "mayank"
     }
   ]
 }
