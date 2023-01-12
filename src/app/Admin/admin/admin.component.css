@@ -18,6 +18,9 @@
   padding: 10px;
   box-shadow: 5px 12px #11393b;
   background: #bddbde; 
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
     
 .table {
