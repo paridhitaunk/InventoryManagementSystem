@@ -73,19 +73,19 @@
     <th mat-header-cell *matHeaderCellDef class="tHeader"> Action </th>   
     <td mat-cell *matCellDef="let element" style="text-align: center;"> 
         
-        <button mat-stroked-button matTooltip="Click to return stock" class="iconbutton" (click)="returnStocks(element)">
+        <button mat-stroked-button matTooltip="Click to return stock" class="iconbutton1" (click)="returnStocks(element)">
           Return
         </button> 
         
-        <button mat-stroked-button matTooltip="Click to report issue" (click)="reportQualityIssue(element)" class="iconbutton" >
+        <button mat-stroked-button matTooltip="Click to report issue" (click)="reportQualityIssue(element)" class="iconbutton2" >
           Report
         </button>
 
-        <button mat-stroked-button matTooltip="Click to cancel order" (click)="cancelOrder(element)" class="iconbutton" style="margin-top:2px">
+        <button mat-stroked-button matTooltip="Click to cancel order" (click)="cancelOrder(element)" class="iconbutton3" >
           Cancel
         </button>
         
-        <button *ngIf="element.oPayment!='Done'" mat-stroked-button matTooltip="Make Payment" (click)="makePaymentDialog(element)" class="iconbutton" color="primary">
+        <button *ngIf="element.oPayment!='Done'" mat-stroked-button matTooltip="Make Payment" (click)="makePaymentDialog(element)" class="iconbutton4">
           Payment
         </button>
     </td>
