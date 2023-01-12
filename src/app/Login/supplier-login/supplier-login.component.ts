@@ -4,6 +4,7 @@ import { getAuth } from "firebase/auth";
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
 import { SupplierForm } from 'src/app/Models/Supplier';
 import { Router } from '@angular/router';
+import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 @Component({
   selector: 'app-supplier-login',
   templateUrl: './supplier-login.component.html',
@@ -11,14 +12,13 @@ import { Router } from '@angular/router';
 })
 export class SupplierLoginComponent {
 
-  constructor(private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
+  constructor(private authService:AuthenticationService,private commonServices: CommonServiceService,private service:InventoryServicesService,private router:Router){}
 
   logout(){
     this.authService.logout().subscribe(()=>{
       this.router.navigate(['']);
     });
   }
- arr:[];
   
   username:any;
   suppliers:SupplierForm[];

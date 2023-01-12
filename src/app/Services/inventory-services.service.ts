@@ -21,17 +21,19 @@ export class InventoryServicesService {
 
     // <--------------------------------- User Services --------------------------------------------->
 
-
-
-    Save(user:any){
-      console.log(user);
-      return this.http.post<any>(`${this.baseUrl}/Users`, user)
+    getCurrentUser(user:any)
+    {
+      
     }
+  //   Save(user:any){
+  //     console.log(user);
+  //     return this.http.post<any>(`${this.baseUrl}/Users`, user)
+  //   }
   
-    userGetData():Observable<any[]>
-  {
-     return this.http.get<any[]>(this.baseUrl+"/Users");
-  }
+  //   userGetData():Observable<any[]>
+  // {
+  //    return this.http.get<any[]>(this.baseUrl+"/Users");
+  // }
 
 
 

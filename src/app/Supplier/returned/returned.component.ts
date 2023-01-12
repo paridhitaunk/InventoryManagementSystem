@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Order } from 'src/app/Models/orders';
 import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { InventoryServicesService } from 'src/app/Services/inventory-services.service';
+import { CommonServiceService } from 'src/app/SharedService/common-service.service';
 
 interface IOrderStatus {
   value: string;
@@ -17,7 +18,7 @@ interface IOrderStatus {
 })
 export class ReturnedComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
+  constructor(public dialog: MatDialog,private commonServices:CommonServiceService,private authService:AuthenticationService,private service:InventoryServicesService,private router:Router){}
 
   logout(){
     this.authService.logout().subscribe(()=>{
@@ -26,6 +27,7 @@ export class ReturnedComponent implements OnInit {
   }
 
   Order_LIST: Order[];
+  currentSupplier:any;
   displayedColumns = ['oId','oNoProduct','oAmount','oDate','oPayment','oPaymentType','oStatus'];
   orderStatus: IOrderStatus[] = [
     {value: '1', viewValue: 'Delivered'},
@@ -36,12 +38,17 @@ export class ReturnedComponent implements OnInit {
 
   ngOnInit():void
   {
-   this.service.orderGetData().subscribe((data:Order[]) => {
-     this.Order_LIST = data.filter( order => order.oStatus=='Returned');
-     {
-     console.log(data);
-     }
-   })
+  //  this.service.orderGetData().subscribe((data:Order[]) => {
+  //    this.Order_LIST = data.filter( order => order.oStatus=='Returned');
+  //    {
+  //    console.log(data);
+  //    }
+  //  })
+
+   this.currentSupplier= this.commonServices.userData;
+   this.service.orderGetData().subscribe((data: Order[]) => {
+     this.Order_LIST = data.filter((order) => order.oStatus == 'Returned' && order.supplier == this.currentSupplier.name);
+   });
   }
 
 }
