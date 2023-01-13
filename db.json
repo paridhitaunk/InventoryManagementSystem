@@ -64,7 +64,7 @@
       "pPrice": "899",
       "pMfgDate": "2023-01-01T18:30:00.000Z",
       "pExpiryDate": "2034-11-28T18:30:00.000Z",
-      "pAvailabiltyCount": 12
+      "pAvailabiltyCount": 13
     },
     {
       "id": "103",
@@ -170,9 +170,9 @@
       "oPaymentType": "Card-Based Payment",
       "oPayment": "Pending",
       "oDate": "2023-01-16T18:30:00.000Z",
-      "oStatus": "Pending",
-      "reportIssue": "",
-      "supplier": "harsha"
+      "oStatus": "Returned",
+      "supplier": "harsha",
+      "reportIssue": "Expire"
     },
     {
       "id": 123,
@@ -196,7 +196,7 @@
       "oPaymentType": "Card-Based Payment",
       "oPayment": "Done",
       "oDate": "2023-01-29T18:30:00.000Z",
-      "oStatus":"Delivered",
+      "oStatus": "Delivered",
       "reportIssue": "",
       "supplier": "Nikita"
     },
@@ -209,7 +209,7 @@
       "oPaymentType": "Card-Based Payment",
       "oPayment": "Done",
       "oDate": "2023-01-22T18:30:00.000Z",
-      "oStatus":"Delivered",
+      "oStatus": "Delivered",
       "reportIssue": null,
       "supplier": "Aditya"
     },
@@ -288,8 +288,7 @@
       "oPayment": "Pending",
       "oDate": "2023-01-21T18:30:00.000Z",
       "oStatus": "Pending",
-      "reportIssue": null,
-      "supplier": "mayank"
+      "reportIssue": "Expired Product"
     },
     {
       "id": 132,
@@ -298,11 +297,10 @@
       "oNoOfProducts": "30",
       "oAmount": 20970,
       "oPaymentType": "UPI PaymentMethods",
-      "oPayment": "Pending",
+      "oPayment": "Done",
       "oDate": "2023-01-29T18:30:00.000Z",
       "oStatus": "Pending",
-      "reportIssue": null,
-      "supplier": "mayank"
+      "reportIssue": null
     },
     {
       "id": 133,

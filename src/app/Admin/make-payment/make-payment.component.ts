@@ -25,6 +25,7 @@ export class MakePaymentComponent {
       oPayment:new FormControl(),
       oDate:new FormControl(),
       oStatus:new FormControl(),
+      supplier: new FormControl(),
       reportIssue:new FormControl()
       });
       this.orderDetailsform.controls['id'].setValue(this.editData.id);
